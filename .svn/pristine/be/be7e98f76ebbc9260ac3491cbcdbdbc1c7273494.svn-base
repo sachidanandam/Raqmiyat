@@ -1,0 +1,9 @@
+<globals>
+    <attributes datatype="boolean" value="true" name="isMale"/>
+    <attributes datatype="string" value="" name="camBase64"/>
+    <attributes datatype="string" value="" name="selectedCategory"/>
+    <attributes datatype="boolean" value="true" name="isArabicLocale"/>
+    <attributes datatype="boolean" value="true" name="isArabicSupported"/>
+    <attributes datatype="boolean" value="true" name="isAttestedInside"/>
+    <attributes datatype="boolean" value="false" name="isAttested"/>
+</globals>

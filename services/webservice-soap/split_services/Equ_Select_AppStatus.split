@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Select_AppStatus</id>
+        <ignoreProxy>false</ignoreProxy>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Select_AppStatus&gt;
+         &lt;moh:AppType&gt;2&lt;/moh:AppType&gt;
+         &lt;moh:AppNo&gt;201414197&lt;/moh:AppNo&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Select_AppStatus&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_AppStatus</id>
+            <params>
+                <accessType></accessType>
+                <format>int</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>AppType</name>
+                <type>java.lang.Integer</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>int</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>AppNo</name>
+                <type>java.lang.Integer</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Select_AppStatus</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Select_AppStatusResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Select_AppStatusResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="EQUI" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="EQUI"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="DEGREEAPPLICATIONID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CURRDEGREE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CURRMAJOR" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CURRUNIVERSITY" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="UNIVERSITY" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STATUS" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CURRYEAR" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_A" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_E" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_A" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_E" type="xs:string"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"/&gt;
+         &lt;/Select_AppStatusResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Select_AppStatusResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Tue, 23 Dec 2014 11:27:09 GMT
+Content-Length: 1692
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_AppStatusResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Select_AppStatusResult</id>
+            </records>
+        </outputStructure>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Select_AppStatus</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>true</escapeXML>
+        <id>GetStudentDetails1</id>
+        <ignoreProxy>true</ignoreProxy>
+        <intemplate>&lt;soapenv:Envelope xmlns:arc="http://archivingstudentdataservice.org/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;arc:GetStudentDetails&gt;
+         &lt;!--Optional:--&gt;
+         &lt;arc:ChipSN&gt;5054fd5b&lt;/arc:ChipSN&gt;
+         &lt;!--Optional:--&gt;
+         &lt;arc:Username&gt;WSMOHE&lt;/arc:Username&gt;
+         &lt;!--Optional:--&gt;
+         &lt;arc:Password&gt;Mohe@Webservice&lt;/arc:Password&gt;
+      &lt;/arc:GetStudentDetails&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>GetStudentDetails</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>ChipSN</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>Username</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>Password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>GetStudentDetails</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;GetStudentDetailsResponse xmlns="http://archivingstudentdataservice.org/"&gt;
+         &lt;GetStudentDetailsResult&gt;
+            &lt;string&gt;Student Id___-___199611573&lt;/string&gt;
+            &lt;string&gt;Student Name___-___Khalid Bin Al Waleed&lt;/string&gt;
+            &lt;string&gt;Gender___-___Male&lt;/string&gt;
+            &lt;string&gt;Nationality___-___United Arab Emirates&lt;/string&gt;
+            &lt;string&gt;Email___-___Ahmad@Hotmail.Com&lt;/string&gt;
+            &lt;string&gt;Emirate___-___Dubai&lt;/string&gt;
+            &lt;string&gt;Mobile___-___...&lt;/string&gt;
+            &lt;string&gt;Request Type___-___Graduate&lt;/string&gt;
+            &lt;string&gt;Certificate Title___-___Bachelor Of Arts In International Studies&lt;/string&gt;
+            &lt;string&gt;Institute___-___American University In Dubai&lt;/string&gt;
+            &lt;string&gt;Study Level___-___Master&lt;/string&gt;
+            &lt;string&gt;Graduation Year___-___...&lt;/string&gt;
+            &lt;string&gt;Semester___-___Spring&lt;/string&gt;
+            &lt;string&gt;Previous Title___-___Arts&lt;/string&gt;
+            &lt;string&gt;Previous Study Level___-___Secondary Certificate&lt;/string&gt;
+            &lt;string&gt;Previous Certificate Country___-___United Arab Emirates&lt;/string&gt;
+            &lt;string&gt;Previous Certificate Institute___-___Uae School&lt;/string&gt;
+            &lt;string&gt;Accreditation Country___-___United Arab Emirates&lt;/string&gt;
+            &lt;string&gt;Accreditation Institute___-___Abc University&lt;/string&gt;
+            &lt;string&gt;Accreditation Hours___-___132&lt;/string&gt;
+            &lt;string&gt;UAE National ID___-___123-4567-8912645-1&lt;/string&gt;
+            &lt;string&gt;pg no___-___129&lt;/string&gt;
+            &lt;string&gt;gender id___-___1&lt;/string&gt;
+            &lt;string&gt;nationality id___-___591&lt;/string&gt;
+            &lt;string&gt;emirate id___-___2&lt;/string&gt;
+            &lt;string&gt;certificatetype id___-___1&lt;/string&gt;
+            &lt;string&gt;inst no___-___4&lt;/string&gt;
+            &lt;string&gt;inst no1___-___59&lt;/string&gt;
+            &lt;string&gt;semester id___-___2&lt;/string&gt;
+            &lt;string&gt;prevstudylevel id___-___1&lt;/string&gt;
+            &lt;string&gt;prevcertificatecountry id___-___591&lt;/string&gt;
+         &lt;/GetStudentDetailsResult&gt;
+      &lt;/GetStudentDetailsResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 4.0.30319
+Date: Wed, 17 Dec 2014 09:39:13 GMT
+Content-Length: 1864
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>GetStudentDetailsResponse</id>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>GetStudentDetailsResult</id>
+                <params>
+                    <accessType></accessType>
+                    <format>string</format>
+                    <formatValue></formatValue>
+                    <jsValue></jsValue>
+                    <name>string</name>
+                    <type>java.lang.String</type>
+                    <value></value>
+                </params>
+            </records>
+        </outputStructure>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://archivingstudentdataservice.org/GetStudentDetails</soapaction>
+        <timeout></timeout>
+        <url>http://www.amricon-dms.com/StudentDataService.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>http://www.amricon-dms.com/StudentDataService.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

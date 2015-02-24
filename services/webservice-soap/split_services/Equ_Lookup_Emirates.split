@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Lookup_Emirates</id>
+        <ignoreProxy>false</ignoreProxy>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Lookup_Emirates&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Lookup_Emirates&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_Emirates</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Lookup_Emirates</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Lookup_EmiratesResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Lookup_EmiratesResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="Table"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="EMIRATE_CD" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EMIRATE_ENG" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EMIRATE_ARB" type="xs:string"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;NewDataSet xmlns=""&gt;
+                  &lt;Table diffgr:hasChanges="inserted" diffgr:id="Table8" msdata:rowOrder="0"&gt;
+                     &lt;EMIRATE_CD&gt;0&lt;/EMIRATE_CD&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table1" msdata:rowOrder="1"&gt;
+                     &lt;EMIRATE_CD&gt;1&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Abudhabi&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;أبوظبي&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table2" msdata:rowOrder="2"&gt;
+                     &lt;EMIRATE_CD&gt;2&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Dubai&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;دبي&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table3" msdata:rowOrder="3"&gt;
+                     &lt;EMIRATE_CD&gt;3&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Fujairah&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;الفجيرة&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table4" msdata:rowOrder="4"&gt;
+                     &lt;EMIRATE_CD&gt;4&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Ras Al Khaimah&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;رأس الخيمة&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table5" msdata:rowOrder="5"&gt;
+                     &lt;EMIRATE_CD&gt;5&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Sharjah&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;الشارقة&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table6" msdata:rowOrder="6"&gt;
+                     &lt;EMIRATE_CD&gt;6&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Umm Al Quaim&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;أم القيوين&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table7" msdata:rowOrder="7"&gt;
+                     &lt;EMIRATE_CD&gt;7&lt;/EMIRATE_CD&gt;
+                     &lt;EMIRATE_ENG&gt;Ajman&lt;/EMIRATE_ENG&gt;
+                     &lt;EMIRATE_ARB&gt;عجمان&lt;/EMIRATE_ARB&gt;
+                  &lt;/Table&gt;
+               &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/Lookup_EmiratesResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Lookup_EmiratesResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Wed, 18 Feb 2015 12:49:09 GMT
+Content-Length: 2428
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_EmiratesResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Lookup_EmiratesResult</id>
+            </records>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>outputEmirates</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//Lookup_EmiratesResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>emiratesList</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//NewDataSet</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>emirateID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/EMIRATE_CD</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>emiratesList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>emirateName_en</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/EMIRATE_ENG</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>emiratesList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>emirateName_ar</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/EMIRATE_ARB</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>emiratesList</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Lookup_Emirates</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiTest/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiTest/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

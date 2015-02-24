@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Select_ReqDocuments</id>
+        <ignoreProxy>false</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>countryid</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>77</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>studylevelid</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>1</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>username</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>webservice</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>password</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>wEbsErViCe$35#</testvalue>
+            <value></value>
+        </inparam>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Select_ReqDocuments&gt;
+         &lt;moh:CountryId&gt;$countryid&lt;/moh:CountryId&gt;
+         &lt;moh:StudylevelId&gt;$studylevelid&lt;/moh:StudylevelId&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;$username&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;$password&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Select_ReqDocuments&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_ReqDocuments</id>
+            <params>
+                <accessType></accessType>
+                <format>int</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>CountryId</name>
+                <type>java.lang.Integer</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>int</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>StudylevelId</name>
+                <type>java.lang.Integer</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Select_ReqDocuments</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Select_ReqDocumentsResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Select_ReqDocumentsResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="EQUI" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="EQUI"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="REQ_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="DESCRIPTION_E" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="DESCRIPTION_A" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CDATE" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="UDATE" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="UUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_ID" type="xs:decimal"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;NewDataSet xmlns=""&gt;
+                  &lt;EQUI diffgr:id="EQUI1" msdata:rowOrder="0"&gt;
+                     &lt;REQ_ID&gt;6249&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original qualification to be equalized (wall certificate) duly attested (attested by the ministry of foreign affairs at the country issuing the qualification and the UAE embassy there or the UAE Ministry of Foreign Affairs), a copy thereof or the original graduation certificate showing that the applicant has met the requirements and obtained the degree.&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;أصل المؤهل المطلوب معادلته (الشهادة الجدارية)، موثّقًا وفق الأصول، (توثيق وزارة الخارجية للدولة التي صدر عنها المؤهل، وسفارة دولة الإمارات في بلد الدراسة، أو وزارة الخارجية الاماراتية) وصورة عنه، أو أصل مصدقة التخرج تفيد باستكمال المتطلبات وحصول الطالب على الدرجة&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI2" msdata:rowOrder="1"&gt;
+                     &lt;REQ_ID&gt;6250&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original transcript of records for the qualification to be equalized (attested by the ministry of foreign affairs at the country issuing the qualification and the UAE embassy there or the UAE Ministry of Foreign Affairs) and a copy thereof&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;كشف الدرجات أو السجل الدراسي الأصلي للمؤهل المطلوب معادلته، موثّقًا وفق الأصول (توثيق وزارة الخارجية للدولة التي صدر عنها المؤهل، وسفارة دولة الإمارات في بلد الدراسة، أو وزارة الخارجية الاماراتية) وصورة عنه&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI3" msdata:rowOrder="2"&gt;
+                     &lt;REQ_ID&gt;6251&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original passport and a proof of residence (entry and exit seals for the country where the applicant studied), a copy of the standardized number of the passport (for citizens), a copy of first entry to the country with the standardized number and a copy of the ID card (for non-citizens).? ?&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;أصل جواز السفر، وإثبات الإقامة (أختام الدخول إلى بلد الدراسة والخروج منه)، ونسخة عن الرقم الموحّد في جواز السفر (للمواطنين)، ونسخة عن أول دخول للدولة مع الرقم الموحّد (لغير المواطنين).&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI4" msdata:rowOrder="3"&gt;
+                     &lt;REQ_ID&gt;6252&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original equivalency should be attached along with a copy of it by the competent authorities in the country where the qualification is granted if this country's system so requires (in case of a private university).&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;إرفاق المعادلة الأصلية من الجهات المختصّة في الدولة التي صدر عنها المؤهل إذا كان نظام تلك الدولة ينص على ذلك (إذا كانت الجامعة خاصة)، وصورة عنها. &lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI5" msdata:rowOrder="4"&gt;
+                     &lt;REQ_ID&gt;6253&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;A copy of the ID card &lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;نسخة عن بطاقة الهوية &lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI6" msdata:rowOrder="5"&gt;
+                     &lt;REQ_ID&gt;6254&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;Legal translation of the certificate if issued in any language other than Arabic or English&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;ترجمة قانونية للشهادة إذا كانت صادرة بغير اللغة العربية أو الإنجليزية&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI7" msdata:rowOrder="6"&gt;
+                     &lt;REQ_ID&gt;6255&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original delegation letter for delegated students, showing the certificate title, the name of the university, the target country, the date of commencement and end of delegation and the system of study&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;أصل رسالة الابتعاث بالنسبة للطلبة المبتعثين، موضحاً فيها اسم الشهادة التي تم الحصول عليها، واسم الجامعة، وبلد الدراسة، وتاريخ بداية البعثة وتاريخ نهايتها، ونظام الدراسة&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI8" msdata:rowOrder="7"&gt;
+                     &lt;REQ_ID&gt;6256&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;The original letter of the embassy of the country issuing the qualification with the academic institution's reply indicating: the authenticity of the qualification, the applicable study approach and whether the qualification issuer is certified (the department does the correspondance in case the  embassy's letter doesn't cover all required information, or if the embassy of the country of study doesn't issue such document)&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;النسخة الأصلية من رسالة سفارة البلد الصادر عنه المؤهل، مرفقاً بها ردّ المؤسسة الأكاديمية الذي يفيد بما يلي: صحة المؤهل، وأسلوب الدراسة المتّبع، واعتماد المؤسسة التي صدر عنها المؤهل (تقوم الإدارة بالمراسلة في حال عدم استيفاء رسالة السفارة للمعلومات المطلوبة أو في حال لا تقوم سفارة البلد الصادر عنه المؤهل بإصدار مثل هذه الوثيقة)&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI9" msdata:rowOrder="8"&gt;
+                     &lt;REQ_ID&gt;6257&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;A transcript record of transferred hours for each institution independently (where applicable) and a copy thereof, attaching the original letter of the embassy of the country issuing this transcript record with the academic institution's reply indicating: the authenticity of the course, the applicable study approach and whether the transcript issuer is certified. &lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;السجل الدراسي الخاص بالساعات المحوّلة لكل مؤسسة على حدة (حيثما انطبق ذلك)، وصورة عنه، مع إرفاق نسخة أصلية من رسالة سفارة البلد الصادر عنه ذلك السجل الدراسي مرفقًا بها ردّ المؤسسة التعليمية الذي يفيد بصحة المساقات الدراسية، وأسلوب الدراسة المتّبع، واعتماد المؤسسة التي صدر عنها السجل.&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI10" msdata:rowOrder="9"&gt;
+                     &lt;REQ_ID&gt;6258&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;Duly certified original certificates preceding the qualification to be equalized and copies of them.&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;أصل الشهادات السابقة للشهادة المطلوب معادلتها موثقةً وفق الأصول، وصورة  عنها&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI11" msdata:rowOrder="10"&gt;
+                     &lt;REQ_ID&gt;6259&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;Duly certified original transcripts of records for the preceding certificates and copies of such transcripts.&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;أصل السجلات الدراسية للشهادات السابقة موثقةً وفق الأصول، وصورة عنها&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI12" msdata:rowOrder="11"&gt;
+                     &lt;REQ_ID&gt;6260&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;?Applying for equivalency of the certificate preceding the qualification to be equalized - if not previously equalized by the MOHESR. &lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;التقدم بطلب لمعادلة الشهادة السابقة للمؤهل المراد معادلته – إذا لم يسبق معادلتها من قبل وزارة التعليم العالي والبحث العلمي-&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI13" msdata:rowOrder="12"&gt;
+                     &lt;REQ_ID&gt;6261&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;A copy of preceding equivalency obtained from the MOHESR. &lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;إرفاق نسخة من المعادلات السابقة التي تم الحصول عليها من قِبل وزارة التعليم العالي والبحث العلمي&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+                  &lt;EQUI diffgr:id="EQUI14" msdata:rowOrder="13"&gt;
+                     &lt;REQ_ID&gt;6262&lt;/REQ_ID&gt;
+                     &lt;DESCRIPTION_E&gt;A copy of the abstract of postgraduate thesis&lt;/DESCRIPTION_E&gt;
+                     &lt;DESCRIPTION_A&gt;نسخة عن ملخص أطروحة الدراسات العليا&lt;/DESCRIPTION_A&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;CDATE&gt;2014-02-12T10:32:15+04:00&lt;/CDATE&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                  &lt;/EQUI&gt;
+               &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/Select_ReqDocumentsResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Select_ReqDocumentsResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Mon, 16 Feb 2015 12:08:45 GMT
+Content-Length: 11342
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_ReqDocumentsResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Select_ReqDocumentsResult</id>
+            </records>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>output</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//Select_ReqDocumentsResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>reqdocs</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//NewDataSet</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>REQ_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>EQUI/REQ_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reqdocs</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>DESCRIPTION_E</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>EQUI/DESCRIPTION_E</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reqdocs</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>DESCRIPTION_A</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>EQUI/DESCRIPTION_A</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reqdocs</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>COUNTRY_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>EQUI/COUNTRY_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>reqdocs</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Select_ReqDocuments</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

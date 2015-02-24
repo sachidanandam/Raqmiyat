@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Update_Reconsider</id>
+        <ignoreProxy>false</ignoreProxy>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Update_Reconsider&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:ODT&gt;
+            &lt;!--You may enter ANY elements at this point--&gt;
+            &lt;!--You may enter ANY elements at this point--&gt;
+            &lt;xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="EQUI" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="EQUI"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+							     &lt;xs:element minOccurs="0" name="RECONSIDER_ID" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_NO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_NO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ISSUE_ORG_CNT" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_TITLE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COMMITTEE_NO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ISSUE_INST" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="Major" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="OBJECTION_REASONS" type="xs:string"/&gt;
+								 &lt;xs:element minOccurs="0" name="OBJECTION_TYPE_ID" type="xs:string"/&gt;
+								 &lt;xs:element minOccurs="0" name="STATUS_ID" type="xs:string"/&gt;
+								 &lt;xs:element minOccurs="0" name="COMMENTS" type="xs:string"/&gt;
+                               &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;DocumentElement&gt;
+                  &lt;EQUI diffgr:id="EQUI1" msdata:rowOrder="0"&gt;
+					 &lt;RECONSIDER_ID&gt;123&lt;/RECONSIDER_ID&gt;
+                     &lt;APP_NO&gt;201414195&lt;/APP_NO&gt;
+                     &lt;CERT_NO&gt;1056623&lt;/CERT_NO&gt;
+                     &lt;CERT_ISSUE_ORG_CNT&gt;2&lt;/CERT_ISSUE_ORG_CNT&gt;
+                     &lt;CERT_TITLE&gt;bachelors&lt;/CERT_TITLE&gt;
+                     &lt;COMMITTEE_NO&gt;123&lt;/COMMITTEE_NO&gt;
+                     &lt;CERT_ISSUE_INST&gt;univ of dubai&lt;/CERT_ISSUE_INST&gt;
+                     &lt;Major&gt;B.E&lt;/Major&gt;
+                     &lt;OBJECTION_REASONS&gt;reason&lt;/OBJECTION_REASONS&gt;
+					 &lt;OBJECTION_TYPE_ID&gt;1&lt;/OBJECTION_TYPE_ID&gt;
+					 &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+					 &lt;COMMENTS&gt;aaa&lt;/COMMENTS&gt;
+                   &lt;/EQUI&gt;
+               &lt;/DocumentElement&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/moh:ODT&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Update_Reconsider&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Update_Reconsider</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>ODT</id>
+            </records>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Update_Reconsider</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Update_ReconsiderResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Update_ReconsiderResult&gt;true&lt;/Update_ReconsiderResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Update_ReconsiderResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Tue, 23 Dec 2014 04:45:48 GMT
+Content-Length: 410
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Update_ReconsiderResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>boolean</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>Update_ReconsiderResult</name>
+                <type>true or false</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </outputStructure>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Update_Reconsider</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

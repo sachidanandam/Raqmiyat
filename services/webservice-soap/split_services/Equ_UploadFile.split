@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_UploadFile</id>
+        <ignoreProxy>true</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>APP_NO</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>201412160</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>FILENAME</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>1.jpg</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>DESCRIPTION</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>image</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>collection</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>FILEDATA</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>gsdkjhgsakjdfhgl;sahglsdfhgl</testvalue>
+            <value></value>
+        </inparam>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:UploadFile&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:ODT&gt;
+            &lt;!--You may enter ANY elements at this point--&gt;
+            &lt;!--You may enter ANY elements at this point--&gt;
+            &lt;xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="EQUI" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="EQUI"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_NO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="FILENAME" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="DESCRIPTION" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="FILEDATA" type="xs:string"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;DocumentElement&gt;
+                  &lt;EQUI diffgr:id="EQUI1" msdata:rowOrder="0"&gt;
+                     &lt;APP_NO&gt;$APP_NO&lt;/APP_NO&gt;
+                     &lt;FILENAME&gt;$FILENAME&lt;/FILENAME&gt;
+                     &lt;DESCRIPTION&gt;$DESCRIPTION&lt;/DESCRIPTION&gt;
+                     &lt;FILEDATA&gt;$FILEDATA&lt;/FILEDATA&gt;
+                  &lt;/EQUI&gt;
+               &lt;/DocumentElement&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/moh:ODT&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:UploadFile&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>UploadFile</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>ODT</id>
+            </records>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>UploadFile</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;UploadFileResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;UploadFileResult&gt;false&lt;/UploadFileResult&gt;
+         &lt;outPut&gt;Unable to cast object of type 'System.String' to type 'System.Byte[]'.&lt;/outPut&gt;
+      &lt;/UploadFileResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Wed, 24 Dec 2014 12:20:42 GMT
+Content-Length: 446
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>UploadFileResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>boolean</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>UploadFileResult</name>
+                <type>true or false</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>FileResult</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//UploadFileResponse/UploadFileResult</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>Status</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//UploadFileResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/UploadFile</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiTest/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiTest/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

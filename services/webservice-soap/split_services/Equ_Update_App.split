@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Update_App</id>
+        <ignoreProxy>false</ignoreProxy>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Update_App&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:ODT&gt;
+            &lt;xs:schema xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="EQUI" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="EQUI"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="ADDRESS" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="LOGINNAME" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="PWD" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EMAIL" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="GENDER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="ARB_NAME" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NATIONALITY_ID" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EMIRATE_ID" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="MOBILE_CD" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="MOBILE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_NO" type="xs:string"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;DocumentElement&gt;
+                  &lt;EQUI diffgr:id="EQUI1" msdata:rowOrder="0"&gt;
+                     &lt;ADDRESS&gt;ADD1222&lt;/ADDRESS&gt;
+                     &lt;LOGINNAME&gt;LOG&lt;/LOGINNAME&gt;
+                     &lt;PWD&gt;123&lt;/PWD&gt;
+                     &lt;EMAIL&gt;SAT@SS.UU&lt;/EMAIL&gt;
+                     &lt;GENDER&gt;2&lt;/GENDER&gt;
+                     &lt;ARB_NAME&gt;CC&lt;/ARB_NAME&gt;
+                     &lt;NATIONALITY_ID&gt;2&lt;/NATIONALITY_ID&gt;
+                     &lt;EMIRATE_ID&gt;2&lt;/EMIRATE_ID&gt;
+                     &lt;MOBILE_CD&gt;56&lt;/MOBILE_CD&gt;
+                     &lt;MOBILE&gt;345677&lt;/MOBILE&gt;
+                     &lt;APP_NO&gt;201414195&lt;/APP_NO&gt;
+                  &lt;/EQUI&gt;
+               &lt;/DocumentElement&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/moh:ODT&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Update_App&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Update_App</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>ODT</id>
+            </records>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Update_App</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Update_AppResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Update_AppResult&gt;true&lt;/Update_AppResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Update_AppResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Fri, 02 Jan 2015 09:19:30 GMT
+Content-Length: 382
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Update_AppResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>boolean</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>Update_AppResult</name>
+                <type>true or false</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </outputStructure>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Update_App</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

@@ -1,0 +1,530 @@
+function checkFieldsStep1()			//attestation step1 validations
+{
+	if(frmAttestGrad1.txtstudentname!=undefined && frmAttestGrad1.txtstudentname.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterName"));;
+		frmAttestGrad1.txtstudentname.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.dropdownnationality!=undefined && frmAttestGrad1.dropdownnationality.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblSelectCountry"));
+		frmAttestGrad1.dropdownnationality.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtTelephoneAreaCode!=undefined && frmAttestGrad1.txtTelephoneAreaCode.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterTelephoneAreaCode"));
+		frmAttestGrad1.txtTelephoneAreaCode.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtTelephoneAreaCode!=undefined && frmAttestGrad1.txtTelephoneAreaCode.text.length<2)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidTelephone"));
+		frmAttestGrad1.txtTelephoneAreaCode.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtTelephoneNumber!=undefined && frmAttestGrad1.txtTelephoneNumber.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterTelephoneNumber"));
+		frmAttestGrad1.txtTelephoneNumber.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtTelephoneNumber!=undefined && frmAttestGrad1.txtTelephoneNumber.text.length<7)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidTelephone"));
+		frmAttestGrad1.txtTelephoneNumber.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtmobilenumber!=undefined && frmAttestGrad1.txtmobilenumber.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterMobile"));
+		frmAttestGrad1.txtmobilenumber.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtmobilenumber!=undefined && frmAttestGrad1.txtmobilenumber.text.length<7)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidMobileNo"));
+		frmAttestGrad1.txtmobilenumber.setFocus(true);
+		return false;
+	}
+	//
+	else if(frmAttestGrad1.txtemiratesid1!=undefined && frmAttestGrad1.txtemiratesid1.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmAttestGrad1.txtemiratesid1.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid1!=undefined && frmAttestGrad1.txtemiratesid1.text.length<3)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmAttestGrad1.txtemiratesid1.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid2!=undefined && frmAttestGrad1.txtemiratesid2.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmAttestGrad1.txtemiratesid2.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid2!=undefined && frmAttestGrad1.txtemiratesid2.text.length<4)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmAttestGrad1.txtemiratesid2.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid3!=undefined && frmAttestGrad1.txtemiratesid3.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmAttestGrad1.txtemiratesid3.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid3!=undefined && frmAttestGrad1.txtemiratesid3.text.length<7)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmAttestGrad1.txtemiratesid3.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid4!=undefined && frmAttestGrad1.txtemiratesid4.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmAttestGrad1.txtemiratesid4.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemiratesid4!=undefined && frmAttestGrad1.txtemiratesid4.text.length<1)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmAttestGrad1.txtemiratesid4.setFocus(true);
+		return false;
+	}
+	//
+	else if(frmAttestGrad1.txtpobox!=undefined && frmAttestGrad1.txtpobox.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterPOBox"));
+		frmAttestGrad1.txtpobox.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.dropdownemirate!=undefined && frmAttestGrad1.dropdownemirate.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblSelectEmirate"));
+		frmAttestGrad1.dropdownemirate.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemail!=undefined && frmAttestGrad1.txtemail.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmail"));
+		frmAttestGrad1.txtemail.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad1.txtemail!=undefined && !validateUserEmail(frmAttestGrad1.txtemail))
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmail"));
+		frmAttestGrad1.txtemail.setFocus(true);
+		return false;
+	}
+}
+
+function checkFieldsStep2()			//attestation step2 validations
+{
+	//removed as per Raqmiyat requirement (22/09/2014)
+	/*if(frmAttestGrad2.dropdowninstitue!=undefined && frmAttestGrad2.dropdowninstitue.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectInstitute"));
+		frmAttestGrad2.dropdowninstitue.setFocus(true);
+		return false;
+	}*/
+	
+ 	if(frmAttestGrad2.dropdownstudylevel!=undefined && frmAttestGrad2.dropdownstudylevel.selectedKey == 0)
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectStudyLevel"));
+ 		frmAttestGrad2.dropdownstudylevel.setFocus(true);
+ 		return false;
+ 	}
+ 	
+ 	else if(frmAttestGrad2.dropdownmajor!=undefined && frmAttestGrad2.dropdownmajor.selectedKey == 0)
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectProgram"));
+ 		frmAttestGrad2.dropdownmajor.setFocus(true);
+ 		return false;
+ 	}
+	else if(selectedCategory == category_Graduate){
+ 	 if(frmAttestGrad2.txtgraduatedyear!=undefined && frmAttestGrad2.txtgraduatedyear.text == "")
+ 	{
+
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterYearOfGraduation"));
+ 		frmAttestGrad2.txtgraduatedyear.setFocus(true);
+ 		return false;
+ 	}
+	}
+ 	else if(selectedCategory == category_Graduate){
+ 	if(frmAttestGrad2.txtgraduatedyear!=undefined && frmAttestGrad2.txtgraduatedyear.text.length<4)
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidYear"));
+ 		frmAttestGrad2.txtgraduatedyear.setFocus(true);
+ 		return false;
+ 	}
+	}
+ 	else if(frmAttestGrad2.txtnoofdocuments!=undefined && frmAttestGrad2.txtnoofdocuments.text == "")
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterNoOfDocuments"));
+ 		frmAttestGrad2.txtnoofdocuments.setFocus(true);
+      	return false;
+	}
+	
+ 	else if(frmAttestGrad2.txtstudentid!=undefined && frmAttestGrad2.txtstudentid.text == "")
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterStudentID"));
+ 		frmAttestGrad2.txtstudentid.setFocus(true);
+ 		return false;
+ 	}
+ 	else if(selectedCategory == category_Enrolled){
+	 	if(frmAttestGrad2.dropdownSubMajor=undefined && frmAttestGrad2.dropdownSubMajor.selectedKey == 0)
+	 	{
+	 		//alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectProgram"));
+			alert("Please Select Sub Major")
+	 		frmAttestGrad2.dropdownSubMajor.setFocus(true);
+	 		return false;
+	 	}
+	}
+		/*
+ 	else if(frmAttestGrad2.dropdownpaymentmethod!=undefined && frmAttestGrad2.dropdownpaymentmethod.selectedKey == 0)
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectPaymentMethod"));
+ 		frmAttestGrad2.dropdownpaymentmethod.setFocus(true);
+ 		return false;
+ 	}
+	
+  	else if(frmAttestGrad2.dropdownpaymentcardtype!=undefined && frmAttestGrad2.dropdownpaymentcardtype.selectedKey == 0)
+ 	{
+ 		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectCardType"));
+ 		frmAttestGrad2.dropdownpaymentcardtype.setFocus(true);
+ 		return false;
+ 	}
+	*/
+	if(selectedCategory == category_Faculty)		// in case of Faculty members,camera is present in step2
+	{
+/*
+		if(camBase64 == "" || camBase64 == null)
+		{
+			alertDialog(kony.i18n.getLocalizedString("lblPleaseTakePicture"));
+			frmAttestGrad2.camCertImage.setFocus(true);
+			return false;
+		}
+*/
+	}
+}
+
+function checkFieldsStep3()			//attestation step3 validations
+{
+	if(frmAttestGrad3.dropdownstudylevel!=undefined && frmAttestGrad3.dropdownstudylevel.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseSelectStudyLevel"));
+		frmAttestGrad3.dropdownstudylevel.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad3.txtinstitutename!=undefined && frmAttestGrad3.txtinstitutename.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterInstitute"));
+		frmAttestGrad3.txtinstitutename.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad3.txtmajor!=undefined && frmAttestGrad3.txtmajor.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterMajor"));
+		frmAttestGrad3.txtmajor.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad3.txtinstitutename2!=undefined && frmAttestGrad3.txtinstitutename2.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterInstitute"));
+		frmAttestGrad3.txtinstitutename2.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad3.dropdownnationality!=undefined && frmAttestGrad3.dropdownnationality.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblSelectCountry"));
+		frmAttestGrad3.dropdownnationality.setFocus(true);
+		return false;
+	}
+	
+	else if(frmAttestGrad3.txtcredithours!=undefined && frmAttestGrad3.txtcredithours.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterCreditHrs"));
+		frmAttestGrad3.txtcredithours.setFocus(true);
+		return false;
+	}
+	/*
+	if(camBase64 == "" || camBase64 == null)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseTakePicture"));
+		frmAttestGrad3.camCertImage.setFocus(true);
+		return false;
+	}
+*/
+}
+
+function alertDialog(msg)
+{
+	var OkMsg = kony.i18n.getLocalizedString("lblOk");
+	var basicConf = {message: msg,
+	alertType: constants.ALERT_TYPE_ERROR,
+	alertTitle: "",yesLabel:OkMsg,
+	noLabel: null, alertHandler: null};
+	//Defining pspConf parameter for alert
+	var pspConf = {};
+	//Alert definition
+	kony.ui.Alert(basicConf,pspConf);
+	//alert(msg);		// alert alignment logic to be written for arabic
+}
+
+function validateLogin()		//login validation
+{
+
+	if(isArabicLocale == true)
+	{
+		if(frmLoginAR.txtusername!=undefined && frmLoginAR.txtusername.text == "")
+		{
+			alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterUsername"));
+			frmLoginAR.txtusername.setFocus(true);
+			return false;
+		}
+		
+		else if ((kony.string.isAsciiAlpha(frmLoginAR.txtusername.text) || kony.string.isAsciiAlphaNumeric(frmLoginAR.txtusername.text) || kony.string.isNumeric(frmLoginAR.txtusername.text)) == false )
+   		{ 
+	   	 	alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidUsername"));
+	    	frmLoginAR.txtusername.setFocus(true);
+	   	 	return false;
+   		}	
+		
+		else if(frmLoginAR.txtpassword!=undefined && frmLoginAR.txtpassword.text == "")
+		{
+			alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterPassword"));
+			frmLoginAR.txtpassword.setFocus(true);
+			return false;
+		}
+		
+		//just to check if undefined is working!	[this snippet not reqd]
+		//else if(frmLoginAR.txtpassword2!=undefined && frmLoginAR.txtpassword2.text == "")
+		//			alert("wrong code");		
+	}
+	
+	else
+	{
+		if(frmLogin.txtusername!=undefined && frmLogin.txtusername.text == "")
+		{
+			alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterUsername"));
+			frmLogin.txtusername.setFocus(true);
+			return false;
+		}
+		
+		else if ((kony.string.isAsciiAlpha(frmLogin.txtusername.text) || kony.string.isAsciiAlphaNumeric(frmLogin.txtusername.text) || kony.string.isNumeric(frmLogin.txtusername.text)) == false )
+   		{
+	   		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidUsername"));
+	   		frmLogin.txtusername.setFocus(true);
+	   		return false;
+   		}	
+		
+		else if(frmLogin.txtpassword!=undefined && frmLogin.txtpassword.text == "")
+		{
+			alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterPassword"));
+			frmLogin.txtpassword.setFocus(true);
+			return false;
+		}
+	}
+	
+}
+
+function onClickSubmitNewUser()
+{
+	var areAllFieldsCorrect = checkNewRegFields();
+	if(areAllFieldsCorrect == false)
+		return;
+	/*if(isArabicLocale == true)
+		frmLoginAR.show();
+	else
+		frmLogin.show();
+	*/
+	insertNewUser();
+}
+
+function checkNewRegFields()
+{
+	if(frmNewReg.txtuserid!=undefined && frmNewReg.txtuserid.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterUserID"));;
+		frmNewReg.txtuserid.setFocus(true);
+		return false;
+	}
+	
+	if ((kony.string.isAsciiAlpha(frmNewReg.txtuserid.text) || kony.string.isAsciiAlphaNumeric(frmNewReg.txtuserid.text) || kony.string.isNumeric(frmNewReg.txtuserid.text)) == false )
+   		{
+	   		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidUsername"));
+	   		frmNewReg.txtuserid.setFocus(true);
+	   		return false;
+   		}	
+	
+	else if(frmNewReg.txtpassword!=undefined && frmNewReg.txtpassword.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterPassword"));
+		frmNewReg.txtpassword.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtconfirmpassword!=undefined && frmNewReg.txtconfirmpassword.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseReenterPassword"));
+		frmNewReg.txtconfirmpassword.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtpassword.text != frmNewReg.txtconfirmpassword.text)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPasswordsDonotMatch"));
+		frmNewReg.txtconfirmpassword.text = "";
+		frmNewReg.txtconfirmpassword.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtname!=undefined && frmNewReg.txtname.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterName"));
+		frmNewReg.txtname.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemailid!=undefined && frmNewReg.txtemailid.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmail"));
+		frmNewReg.txtemailid.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemailid!=undefined && !validateUserEmail(frmNewReg.txtemailid))
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmail"));
+		frmNewReg.txtemailid.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtmobilenumber!=undefined && frmNewReg.txtmobilenumber.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterMobile"));
+		frmNewReg.txtmobilenumber.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtmobilenumber!=undefined && frmNewReg.txtmobilenumber.text.length<7)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidMobileNo"));
+		frmNewReg.txtmobilenumber.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.dropdownnationality!=undefined && frmNewReg.dropdownnationality.selectedKey == 0)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblSelectCountry"));
+		frmNewReg.dropdownnationality.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid1!=undefined && frmNewReg.txtemiratesid1.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmNewReg.txtemiratesid1.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid1!=undefined && frmNewReg.txtemiratesid1.text.length<3)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmNewReg.txtemiratesid1.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid2!=undefined && frmNewReg.txtemiratesid2.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmNewReg.txtemiratesid2.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid2!=undefined && frmNewReg.txtemiratesid2.text.length<4)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmNewReg.txtemiratesid2.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid3!=undefined && frmNewReg.txtemiratesid3.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmNewReg.txtemiratesid3.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid3!=undefined && frmNewReg.txtemiratesid3.text.length<7)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmNewReg.txtemiratesid3.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid4!=undefined && frmNewReg.txtemiratesid4.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterEmirate"));
+		frmNewReg.txtemiratesid4.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtemiratesid4!=undefined && frmNewReg.txtemiratesid4.text.length<1)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterValidEmirateID"));
+		frmNewReg.txtemiratesid4.setFocus(true);
+		return false;
+	}
+	
+	else if(frmNewReg.txtpassportnumber!=undefined && frmNewReg.txtpassportnumber.text == "")
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseEnterPassportNumber"));
+		frmNewReg.txtpassportnumber.setFocus(true);
+		return false;
+	}
+	
+/*
+	else if(camBase64 == "" || camBase64 == null)
+	{
+		alertDialog(kony.i18n.getLocalizedString("lblPleaseTakePicture"));
+		frmNewReg.camCertImage.setFocus(true);
+		return false;
+	}
+		*/
+}
+
+function validateUserEmail(widgetRefernce)
+{
+	var emailString = widgetRefernce.text;
+	kony.print("user entered mail id is : "+emailString);
+    var isEmailProper = kony.string.isValidEmail(emailString);//re.test(email);
+    return isEmailProper;
+}

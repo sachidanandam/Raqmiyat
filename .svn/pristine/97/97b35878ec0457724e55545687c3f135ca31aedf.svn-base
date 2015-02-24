@@ -1,0 +1,264 @@
+function camCallbackAttestStep3(camObj) {
+    kony.print("Rawbytes is : " + camObj.rawBytes);
+    frmAttestGrad3.imgCamPreview.rawBytes = camObj.rawBytes;
+    frmAttestGrad3.imgCamPreview.setVisibility(true);
+    camBase64 = kony.convertToBase64(camObj.rawBytes);
+    kony.print("Base64 is : " + camBase64);
+}
+
+function camCallbackAttestStep2(camObj) {
+    kony.print("Rawbytes is : " + camObj.rawBytes);
+    frmAttestGrad2.imgCamPreview.rawBytes = camObj.rawBytes;
+    frmAttestGrad2.imgCamPreview.setVisibility(true);
+    camBase64 = kony.convertToBase64(camObj.rawBytes);
+    kony.print("Base64 is : " + camBase64);
+}
+
+function camCallbackNewUser(camObj) {
+    kony.print("Rawbytes is : " + camObj.rawBytes);
+    frmNewReg.imgCamPreview.rawBytes = camObj.rawBytes;
+    frmNewReg.imgCamPreview.setVisibility(true);
+    camBase64 = kony.convertToBase64(camObj.rawBytes);
+    kony.print("Base64 is : " + camBase64);
+}
+
+function setLocaleBasedHeaderTitle(currForm, i18nToBeSet) {
+    if (currForm.headers != undefined || currForm.headers != null) {
+        currForm.headers[0].lblAttestation.text = i18nToBeSet;
+    }
+}
+
+function setLocaleBasedFooterTitle(currForm, i18nToBeSet) {
+    if (currForm.footers != undefined || currForm.footers != null) {
+        if (currForm.footers[0].lblSteps != undefined || currForm.footers[0].lblSteps != null) currForm.footers[0].lblSteps.text = i18nToBeSet;
+    }
+}
+
+function resetLoginFields() {
+    if (isArabicLocale == true) {
+        frmLoginAR.txtusername.text = "";
+        frmLoginAR.txtpassword.text = "";
+    } else {
+        frmLogin.txtusername.text = "";
+        frmLogin.txtpassword.text = "";
+    }
+}
+
+function resetAttestationForms() {
+    resetBase64(); //release previous camera base64
+    //	clear step1 fields
+    isAttested = false;
+    isAttestedInside = true;
+    frmAttestGrad1.rbimgMale.src = "checked.png";
+    frmAttestGrad1.rbimgFemale.src = "unchecked.png";
+    isMale = true;
+    frmAttestGrad1.txtemail.text = "";
+    frmAttestGrad1.txtemiratesid1.text = "";
+    frmAttestGrad1.txtemiratesid2.text = "";
+    frmAttestGrad1.txtemiratesid3.text = "";
+    frmAttestGrad1.txtemiratesid4.text = "";
+    frmAttestGrad1.txtmobilenumber.text = "";
+    frmAttestGrad1.txtpobox.text = "";
+    frmAttestGrad1.txtstudentname.text = "";
+    frmAttestGrad1.txtTelephoneAreaCode.text = "";
+    frmAttestGrad1.txtTelephoneNumber.text = "";
+    frmAttestGrad1.dropdownemirate.selectedKey = "0";
+    frmAttestGrad1.dropdownmobileareacode.selectedKey = "0";
+    frmAttestGrad1.dropdownnationality.selectedKey = "0";
+    //	clear step2 fields
+    frmAttestGrad2.txtgraduatedyear.text = "";
+    frmAttestGrad2.txtnoofdocuments.text = "";
+    frmAttestGrad2.txtstudentid.text = "";
+    frmAttestGrad2.dropdowninstitue.selectedKey = "0";
+    frmAttestGrad2.dropdownmajor.selectedKey = "0";
+    frmAttestGrad2.dropdownpaymentcardtype.selectedKey = "0";
+    frmAttestGrad2.dropdownpaymentmethod.selectedKey = "0";
+    frmAttestGrad2.dropdownstudylevel.selectedKey = "0";
+    frmAttestGrad2.imgCamPreview.src = "pixel.png";
+    //	clear step3 fields
+    frmAttestGrad3.txtcredithours.text = "";
+    frmAttestGrad3.txtinstitutename.text = "";
+    frmAttestGrad3.txtinstitutename2.text = "";
+    frmAttestGrad3.txtmajor.text = "";
+    frmAttestGrad3.dropdownnationality.selectedKey = "0";
+    frmAttestGrad3.imgCamPreview.src = "pixel.png";
+    frmAttestGrad3.dropdownstudylevel.selectedKey = "0";
+}
+
+function resetBase64() //release previous camera base64
+{
+    camBase64 = "";
+}
+
+function resetNewRegForm() {
+    resetBase64(); //release previous camera base64
+    frmNewReg.imgCamPreview.src = "pixel.png";
+    frmNewReg.txtconfirmpassword.text = "";
+    frmNewReg.txtemailid.text = "";
+    frmNewReg.txtemiratesid1.text = "";
+    frmNewReg.txtemiratesid2.text = "";
+    frmNewReg.txtemiratesid3.text = "";
+    frmNewReg.txtemiratesid4.text = "";
+    frmNewReg.txtmobilenumber.text = "";
+    frmNewReg.txtname.text = "";
+    frmNewReg.txtpassportnumber.text = "";
+    frmNewReg.txtpassword.text = "";
+    frmNewReg.txtuserid.text = "";
+    frmNewReg.dropdownnationality.selectedKey = "0";
+    frmNewReg.dropdownmobileareacode.selectedKey = "0";
+}
+
+function showHideMenu() {
+    if (frmMainMenu.hbxGradStud.isVisible == true) {
+        showHideMenuItems(false);
+    } else {
+        showHideMenuItems(true);
+    }
+}
+
+function showHideMenuItems(flag) {
+    frmMainMenu.hbxGradStud.setVisibility(flag);
+    frmMainMenu.hbxCurStud.setVisibility(flag);
+    frmMainMenu.hbxFacMem.setVisibility(flag);
+}
+
+function setGender(selectedGender) {
+    isMale = selectedGender;
+    if (isMale == true) {
+        frmAttestGrad1.rbimgMale.src = "checked.png";
+        frmAttestGrad1.rbimgFemale.src = "unchecked.png";
+    } else {
+        frmAttestGrad1.rbimgMale.src = "unchecked.png";
+        frmAttestGrad1.rbimgFemale.src = "checked.png";
+    }
+}
+
+function setPurpose(attestInside) {
+    isAttestedInside = attestInside;
+    if (isAttestedInside == true) {
+        frmAttestGrad2.rdimgAttestInside.src = "checked.png";
+        frmAttestGrad2.rdimgAttestOutside.src = "unchecked.png";
+    } else {
+        frmAttestGrad2.rdimgAttestInside.src = "unchecked.png";
+        frmAttestGrad2.rdimgAttestOutside.src = "checked.png";
+    }
+}
+
+function setIsCertificateAttested(isAttestedVar) {
+    isAttested = isAttestedVar
+    if (isAttested == true) {
+        frmAttestGrad3.rbimgYes.src = "checked.png";
+        frmAttestGrad3.rbimgNo.src = "unchecked.png";
+    } else {
+        frmAttestGrad3.rbimgYes.src = "unchecked.png";
+        frmAttestGrad3.rbimgNo.src = "checked.png";
+    }
+}
+//function setStudyLevel(boxID)
+//{
+//	if (boxID == 1)
+//	{
+//		frmAttestGrad3.rbimgSecondary.src = "checked.png";
+//		frmAttestGrad3.rbimgDiploma.src = "unchecked.png";
+//		frmAttestGrad3.rbimgBachelor.src = "unchecked.png";
+//		frmAttestGrad3.rbimgMaster.src = "unchecked.png";
+//	}
+//	else if(boxID == 2)
+//	{
+//		frmAttestGrad3.rbimgSecondary.src = "unchecked.png";
+//		frmAttestGrad3.rbimgDiploma.src = "checked.png";
+//		frmAttestGrad3.rbimgBachelor.src = "unchecked.png";
+//		frmAttestGrad3.rbimgMaster.src = "unchecked.png";
+//	}
+//	else if(boxID == 3)
+//	{
+//		frmAttestGrad3.rbimgSecondary.src = "unchecked.png";
+//		frmAttestGrad3.rbimgDiploma.src = "unchecked.png";
+//		frmAttestGrad3.rbimgBachelor.src = "checked.png";
+//		frmAttestGrad3.rbimgMaster.src = "unchecked.png";
+//	}
+//	else if(boxID == 4)
+//	{
+//		frmAttestGrad3.rbimgSecondary.src = "unchecked.png";
+//		frmAttestGrad3.rbimgDiploma.src = "unchecked.png";
+//		frmAttestGrad3.rbimgBachelor.src = "unchecked.png";
+//		frmAttestGrad3.rbimgMaster.src = "checked.png";
+//	}
+//}
+function loadLoginForm() {
+    if (isArabicLocale == true) //(kony.i18n.getCurrentLocale()=="ar_SA")
+    {
+        //alert("locale is " + kony.i18n.getCurrentLocale());
+        frmLoginAR.destroy();
+        frmLoginAR.show();
+    } else {
+        //alert("locale is " + kony.i18n.getCurrentLocale());
+        frmLogin.destroy();
+        frmLogin.show();
+    }
+}
+
+function destroyAllForms() {
+    frmAttestGrad1.destroy();
+    frmAttestGrad2.destroy();
+    frmAttestGrad3.destroy();
+    frmFacultyStatic.destroy();
+    frmCurntStudStatic.destroy();
+    frmGradStaticPage1.destroy();
+    frmGradStaticPage2.destroy();
+    frmMainMenu.destroy();
+    frmNewReg.destroy();
+}
+
+function checkCameraSupport() {
+    if (kony.os.hasCameraSupport() == false) {
+        //do not render camera widget for frmNewReg
+        frmNewReg.lineCamera.setVisibility(false);
+        frmNewReg.hbxcaptureimage.setVisibility(false);
+        frmNewReg.imgCamPreview.setVisibility(false);
+        //do not render camera widget for frmAttestGrad2
+        frmAttestGrad2.hbxCamStaff.setVisibility(false);
+        //do not render camera widget for frmNewReg
+        frmAttestGrad3.lineCamera.setVisibility(false);
+        frmAttestGrad3.hbxcaptureimage.setVisibility(false);
+        frmAttestGrad3.imgCamPreview.setVisibility(false);
+    }
+}
+//to disable fields that would receive data from service
+//function disableFieldsComingFromService()
+//{
+//	frmAttestGrad1.txtTelephoneAreaCode.setEnabled(false);
+//	frmAttestGrad1.txtTelephoneNumber.setEnabled(false);
+//	frmAttestGrad1.txtemiratesid.setEnabled(false);
+//	
+//	if(selectedCategory == category_Graduate)
+//	{
+//		frmAttestGrad1.txtmobilenumber.setEnabled(false);
+//	}
+//}
+function launchDeviceCamera(currFrm) {
+    currFrm.camCertImage.openCamera();
+}
+
+function hideLanguageToggleButton() {
+    frmLogin.lnklanguage.setVisibility(isArabicSupported);
+}
+
+function hideDefaultAppLoadingIndicator() {
+    kony.application.setApplicationBehaviors({
+        "hideDefaultLoadingIndicator": true
+    });
+}
+
+function exitMoHESRApp() {
+    kony.application.exit();
+}
+
+function setAppIdleTimeOut() {
+    //please modify callback as per requirement
+    kony.application.registerForIdleTimeout(5, onSessionTimeout);
+}
+
+function onSessionTimeout() {
+    //
+}

@@ -1,0 +1,7 @@
+function setMohesrGlobals()			//to be used as an identifier for the three flows
+{
+	category_Graduate = "graduate";
+	category_Enrolled = "enrolled";
+	category_Faculty = "faculty";
+	
+}

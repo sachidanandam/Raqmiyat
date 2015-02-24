@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Lookup_Country</id>
+        <ignoreProxy>false</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>user</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>password</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </inparam>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Lookup_Country&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut&gt;&lt;/moh:outPut&gt;
+      &lt;/moh:Lookup_Country&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_Country</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Lookup_Country</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Lookup_CountryResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Lookup_CountryResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="Table"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_E" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="COUNTRY_A" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EMAIL_ID" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NEEDLETTER" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CDATE" type="xs:dateTime"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;NewDataSet xmlns=""&gt;
+                  &lt;Table diffgr:hasChanges="inserted" diffgr:id="Table118" msdata:rowOrder="0"&gt;
+                     &lt;COUNTRY_ID&gt;0&lt;/COUNTRY_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table1" msdata:rowOrder="1"&gt;
+                     &lt;COUNTRY_ID&gt;27&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Ukraine&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;أوكرانيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table2" msdata:rowOrder="2"&gt;
+                     &lt;COUNTRY_ID&gt;2&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Spain&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;اسبانيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-01-20T13:03:48+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table3" msdata:rowOrder="3"&gt;
+                     &lt;COUNTRY_ID&gt;3&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Commonwealth of Australia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;استراليا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;3&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-01-20T13:04:17+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table4" msdata:rowOrder="4"&gt;
+                     &lt;COUNTRY_ID&gt;360&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Scotland&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;اسكتلندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table5" msdata:rowOrder="5"&gt;
+                     &lt;COUNTRY_ID&gt;5&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Union of Soviet Socialist Republics&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الإتحاد السوفيتي سابقاً&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-01-20T13:04:53+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table6" msdata:rowOrder="6"&gt;
+                     &lt;COUNTRY_ID&gt;6&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;United Arab Emirates&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الامارات العربية المتحدة&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table7" msdata:rowOrder="7"&gt;
+                     &lt;COUNTRY_ID&gt;8&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Bosnia and Herzegovina&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;البوسنة و الهرسك&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table8" msdata:rowOrder="8"&gt;
+                     &lt;COUNTRY_ID&gt;20&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Germany&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الألمانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table9" msdata:rowOrder="9"&gt;
+                     &lt;COUNTRY_ID&gt;58&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Indonesia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الأندونيسية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table10" msdata:rowOrder="10"&gt;
+                     &lt;COUNTRY_ID&gt;65&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;IRAN&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الإسلامية الإيرانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table11" msdata:rowOrder="11"&gt;
+                     &lt;COUNTRY_ID&gt;51&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;MAURITANIA&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الإسلامية الموريتانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table12" msdata:rowOrder="12"&gt;
+                     &lt;COUNTRY_ID&gt;62&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Italian Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الايطالية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table13" msdata:rowOrder="13"&gt;
+                     &lt;COUNTRY_ID&gt;34&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Turkey&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية التركية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table14" msdata:rowOrder="14"&gt;
+                     &lt;COUNTRY_ID&gt;10&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Czech Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية التشيكية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table15" msdata:rowOrder="15"&gt;
+                     &lt;COUNTRY_ID&gt;55&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Tunisian Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية التونسية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table16" msdata:rowOrder="16"&gt;
+                     &lt;COUNTRY_ID&gt;9&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;People's Democratic Republic of Algeria&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الجزائرية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table17" msdata:rowOrder="17"&gt;
+                     &lt;COUNTRY_ID&gt;400&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;SLOVAK&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية السلوفاكية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table18" msdata:rowOrder="18"&gt;
+                     &lt;COUNTRY_ID&gt;39&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;The Syrian Arab Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية العربية السورية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table19" msdata:rowOrder="19"&gt;
+                     &lt;COUNTRY_ID&gt;41&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;French Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الفرنسية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table20" msdata:rowOrder="20"&gt;
+                     &lt;COUNTRY_ID&gt;662&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Korea&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية الكورية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table21" msdata:rowOrder="21"&gt;
+                     &lt;COUNTRY_ID&gt;48&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Lebanon&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية اللبنانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table22" msdata:rowOrder="22"&gt;
+                     &lt;COUNTRY_ID&gt;24&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Yemen&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية اليمنية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table23" msdata:rowOrder="23"&gt;
+                     &lt;COUNTRY_ID&gt;25&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Hellenic Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الجمهورية اليونانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table24" msdata:rowOrder="24"&gt;
+                     &lt;COUNTRY_ID&gt;4&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Hashemite Kingdom of Jordan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة الأردنية الهاشمية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-01-20T13:04:41+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table25" msdata:rowOrder="25"&gt;
+                     &lt;COUNTRY_ID&gt;460&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Belgium&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة البلجيكية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table26" msdata:rowOrder="26"&gt;
+                     &lt;COUNTRY_ID&gt;11&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Saudi Arabia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة العربية السعودية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table27" msdata:rowOrder="27"&gt;
+                     &lt;COUNTRY_ID&gt;29&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;United Kingdom&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة المتحدة&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;3&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table28" msdata:rowOrder="28"&gt;
+                     &lt;COUNTRY_ID&gt;21&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Morocco&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة المغربية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table29" msdata:rowOrder="29"&gt;
+                     &lt;COUNTRY_ID&gt;53&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of the Netherlands&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;المملكة الهولندية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table30" msdata:rowOrder="30"&gt;
+                     &lt;COUNTRY_ID&gt;26&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;United State of America&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الولايات المتحدة الامريكية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;3&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table31" msdata:rowOrder="31"&gt;
+                     &lt;COUNTRY_ID&gt;762&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;United Mexican States&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;الولايات المكسيكية المتحدة&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2011-10-11T10:43:54+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table32" msdata:rowOrder="32"&gt;
+                     &lt;COUNTRY_ID&gt;23&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Japan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;اليابان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table33" msdata:rowOrder="33"&gt;
+                     &lt;COUNTRY_ID&gt;681&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;State of Brunei ,Abode of Peace&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;بروناي دار السلام&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table34" msdata:rowOrder="34"&gt;
+                     &lt;COUNTRY_ID&gt;77&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;RUSSIAN WHITE&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;تركمنستان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table35" msdata:rowOrder="35"&gt;
+                     &lt;COUNTRY_ID&gt;40&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;CZECHOSLOVAKIAN&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;تشيكوسلوفاكيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table36" msdata:rowOrder="36"&gt;
+                     &lt;COUNTRY_ID&gt;700&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Union of The Comoros&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جزر القمر&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table37" msdata:rowOrder="37"&gt;
+                     &lt;COUNTRY_ID&gt;162&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Hungary&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية  المجر&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table38" msdata:rowOrder="38"&gt;
+                     &lt;COUNTRY_ID&gt;56&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Federal Democratic Republic of Ethiopia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أثيوبيا الفيدرالية الديمقراطية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table39" msdata:rowOrder="39"&gt;
+                     &lt;COUNTRY_ID&gt;76&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Armenia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أرمينيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table40" msdata:rowOrder="40"&gt;
+                     &lt;COUNTRY_ID&gt;280&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Islamic Republic of Afghanistan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أفغانستان الإسلامية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table41" msdata:rowOrder="41"&gt;
+                     &lt;COUNTRY_ID&gt;756&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Repubkic of albania&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية ألبانيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2010-11-09T13:47:47+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table42" msdata:rowOrder="42"&gt;
+                     &lt;COUNTRY_ID&gt;758&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republica Oriental Del Uruguay&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أوروغواي الشرقية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2011-07-14T13:17:25+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table43" msdata:rowOrder="43"&gt;
+                     &lt;COUNTRY_ID&gt;68&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Uzbekistan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أوزبكستان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table44" msdata:rowOrder="44"&gt;
+                     &lt;COUNTRY_ID&gt;440&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Uganda&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية أوغندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table45" msdata:rowOrder="45"&gt;
+                     &lt;COUNTRY_ID&gt;766&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of the Union of Myanmar&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية اتحاد ميانمار&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2012-12-26T11:19:58+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table46" msdata:rowOrder="46"&gt;
+                     &lt;COUNTRY_ID&gt;72&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Azerbaijan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية اذربيجان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table47" msdata:rowOrder="47"&gt;
+                     &lt;COUNTRY_ID&gt;74&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Estonia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية استونيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table48" msdata:rowOrder="48"&gt;
+                     &lt;COUNTRY_ID&gt;752&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republica Argentina&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الارجنتين&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2009-01-13T09:44:42+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table49" msdata:rowOrder="49"&gt;
+                     &lt;COUNTRY_ID&gt;64&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Federative Republic of Brazil&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية البرازيل الاتحادية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table50" msdata:rowOrder="50"&gt;
+                     &lt;COUNTRY_ID&gt;755&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Portugal&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية البرتغال&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2010-10-20T09:12:13+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table51" msdata:rowOrder="51"&gt;
+                     &lt;COUNTRY_ID&gt;12&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Sudan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية السودان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table52" msdata:rowOrder="52"&gt;
+                     &lt;COUNTRY_ID&gt;14&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Islamic Republic of Somalia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الصومال الفيدرالية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table53" msdata:rowOrder="53"&gt;
+                     &lt;COUNTRY_ID&gt;15&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;People' Republic of China&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الصين الشعبية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table54" msdata:rowOrder="54"&gt;
+                     &lt;COUNTRY_ID&gt;16&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Iraq&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية العراق&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table55" msdata:rowOrder="55"&gt;
+                     &lt;COUNTRY_ID&gt;17&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of the Philippines&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الفلبين&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table56" msdata:rowOrder="56"&gt;
+                     &lt;COUNTRY_ID&gt;754&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Cameroon&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الكاميرون&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2010-10-20T09:09:57+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table57" msdata:rowOrder="57"&gt;
+                     &lt;COUNTRY_ID&gt;182&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Austria&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية النمسا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table58" msdata:rowOrder="58"&gt;
+                     &lt;COUNTRY_ID&gt;22&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of India&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية الهند&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table59" msdata:rowOrder="59"&gt;
+                     &lt;COUNTRY_ID&gt;164&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Ireland&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية ايرلندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table60" msdata:rowOrder="60"&gt;
+                     &lt;COUNTRY_ID&gt;28&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Islamic Republic of Pakistan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية باكستان الإسلامية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table61" msdata:rowOrder="61"&gt;
+                     &lt;COUNTRY_ID&gt;30&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Bulgaria&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية بلغاريا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table62" msdata:rowOrder="62"&gt;
+                     &lt;COUNTRY_ID&gt;31&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Bangladesh&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية بنجلادش الشعبية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table63" msdata:rowOrder="63"&gt;
+                     &lt;COUNTRY_ID&gt;32&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Poland&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية بولندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table64" msdata:rowOrder="64"&gt;
+                     &lt;COUNTRY_ID&gt;763&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Repubkic of Peru&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية بيرو&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2011-11-28T10:38:56+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table65" msdata:rowOrder="65"&gt;
+                     &lt;COUNTRY_ID&gt;720&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Belarus&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية بيلاروس (روسيا البيضاء)&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:35+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table66" msdata:rowOrder="66"&gt;
+                     &lt;COUNTRY_ID&gt;542&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Chad&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية تشاد&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table67" msdata:rowOrder="67"&gt;
+                     &lt;COUNTRY_ID&gt;35&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;United Republic of Tanzania&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية تنزانيا المتحدة&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table68" msdata:rowOrder="68"&gt;
+                     &lt;COUNTRY_ID&gt;179&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of South Africa&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية جنوب أفريقيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;3&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table69" msdata:rowOrder="69"&gt;
+                     &lt;COUNTRY_ID&gt;73&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Georgia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية جورجيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table70" msdata:rowOrder="70"&gt;
+                     &lt;COUNTRY_ID&gt;560&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Djibouti&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية جيبوتي&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table71" msdata:rowOrder="71"&gt;
+                     &lt;COUNTRY_ID&gt;753&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republica of Zimbabwe&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية زيمبابوي&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2009-09-07T09:52:30+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table72" msdata:rowOrder="72"&gt;
+                     &lt;COUNTRY_ID&gt;66&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Democratic Socialist Republic of Sir Lanka&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية سري لانكا الديمقراطية الاشتراكية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table73" msdata:rowOrder="73"&gt;
+                     &lt;COUNTRY_ID&gt;420&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Singapore&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية سنغافورة&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table74" msdata:rowOrder="74"&gt;
+                     &lt;COUNTRY_ID&gt;764&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Serbia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية صربيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2012-02-16T08:51:05+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table75" msdata:rowOrder="75"&gt;
+                     &lt;COUNTRY_ID&gt;380&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Ghana&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية غانا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table76" msdata:rowOrder="76"&gt;
+                     &lt;COUNTRY_ID&gt;163&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Cyprus&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية قبرص&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table77" msdata:rowOrder="77"&gt;
+                     &lt;COUNTRY_ID&gt;69&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;KAZAKHSTAN&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كازاخستان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table78" msdata:rowOrder="78"&gt;
+                     &lt;COUNTRY_ID&gt;75&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Croatia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كرواتيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table79" msdata:rowOrder="79"&gt;
+                     &lt;COUNTRY_ID&gt;60&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Cuba&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كوبا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table80" msdata:rowOrder="80"&gt;
+                     &lt;COUNTRY_ID&gt;767&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Costa Rica&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كوستاريكا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CDATE&gt;2013-01-21T12:08:04+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table81" msdata:rowOrder="81"&gt;
+                     &lt;COUNTRY_ID&gt;757&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Repubkic of kosovo&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كوسوفو&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2011-06-01T09:32:14+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table82" msdata:rowOrder="82"&gt;
+                     &lt;COUNTRY_ID&gt;71&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kyrgyz Republic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كيرغيزستان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table83" msdata:rowOrder="83"&gt;
+                     &lt;COUNTRY_ID&gt;47&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Kenya&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية كينيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table84" msdata:rowOrder="84"&gt;
+                     &lt;COUNTRY_ID&gt;70&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Latvia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية لاتيفيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table85" msdata:rowOrder="85"&gt;
+                     &lt;COUNTRY_ID&gt;221&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Lithuania&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية ليتوانيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table86" msdata:rowOrder="86"&gt;
+                     &lt;COUNTRY_ID&gt;769&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Malta&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية مالطا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2013-09-22T12:37:00+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table87" msdata:rowOrder="87"&gt;
+                     &lt;COUNTRY_ID&gt;50&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Egypt&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية مصرالعربية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table88" msdata:rowOrder="88"&gt;
+                     &lt;COUNTRY_ID&gt;761&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Macedonic&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية مقدونيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2011-10-11T10:42:28+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table89" msdata:rowOrder="89"&gt;
+                     &lt;COUNTRY_ID&gt;765&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Repubkic of Moldova&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية مولدوفا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2012-05-21T12:21:09+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table90" msdata:rowOrder="90"&gt;
+                     &lt;COUNTRY_ID&gt;59&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Federal Republic of Nigeria&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;جمهورية نيجيريا الاتحادية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table91" msdata:rowOrder="91"&gt;
+                     &lt;COUNTRY_ID&gt;157&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;State of Eritrea&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;دولة أرتريا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table92" msdata:rowOrder="92"&gt;
+                     &lt;COUNTRY_ID&gt;19&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;State of Kuwait&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;دولة الكويت&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table93" msdata:rowOrder="93"&gt;
+                     &lt;COUNTRY_ID&gt;42&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;State of Palestine&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;دولة فلسطين&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table94" msdata:rowOrder="94"&gt;
+                     &lt;COUNTRY_ID&gt;44&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;State of Qatar&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;دولة قطر&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table95" msdata:rowOrder="95"&gt;
+                     &lt;COUNTRY_ID&gt;36&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Russian Federation&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;روسيا الاتحادية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table96" msdata:rowOrder="96"&gt;
+                     &lt;COUNTRY_ID&gt;37&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;ROMANIA&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;رومانيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table97" msdata:rowOrder="97"&gt;
+                     &lt;COUNTRY_ID&gt;57&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Zaire&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;زائير&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table98" msdata:rowOrder="98"&gt;
+                     &lt;COUNTRY_ID&gt;38&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Sultanate of Oman&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;سلطنة عمان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table99" msdata:rowOrder="99"&gt;
+                     &lt;COUNTRY_ID&gt;67&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Swiss Confederation&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;سويسرا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table100" msdata:rowOrder="100"&gt;
+                     &lt;COUNTRY_ID&gt;682&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Tajikistan&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;طاجكيستان&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;ADMIN&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2009-06-03T12:40:39+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table101" msdata:rowOrder="101"&gt;
+                     &lt;COUNTRY_ID&gt;768&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Venezuela&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;فنزويلا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;0&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2013-07-24T11:27:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table102" msdata:rowOrder="102"&gt;
+                     &lt;COUNTRY_ID&gt;751&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Finland&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;فنلندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;asma&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2008-08-27T08:05:02+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table103" msdata:rowOrder="103"&gt;
+                     &lt;COUNTRY_ID&gt;43&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Turkish Republic of Northern Cyprus&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;قبرص التركية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table104" msdata:rowOrder="104"&gt;
+                     &lt;COUNTRY_ID&gt;63&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_A&gt;قبرص اليونانية&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table105" msdata:rowOrder="105"&gt;
+                     &lt;COUNTRY_ID&gt;45&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Canada&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;كندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table106" msdata:rowOrder="106"&gt;
+                     &lt;COUNTRY_ID&gt;750&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Korea&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;كوريا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;kiran&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2008-06-19T13:07:21+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table107" msdata:rowOrder="107"&gt;
+                     &lt;COUNTRY_ID&gt;46&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Republic of Colombia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;كولومبيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table108" msdata:rowOrder="108"&gt;
+                     &lt;COUNTRY_ID&gt;49&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Libya&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;ليبيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table109" msdata:rowOrder="109"&gt;
+                     &lt;COUNTRY_ID&gt;61&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Malaysia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;ماليزيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table110" msdata:rowOrder="110"&gt;
+                     &lt;COUNTRY_ID&gt;7&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Bahrain&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة البحرين&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table111" msdata:rowOrder="111"&gt;
+                     &lt;COUNTRY_ID&gt;260&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Denmark&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة الدانمارك&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table112" msdata:rowOrder="112"&gt;
+                     &lt;COUNTRY_ID&gt;13&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Sweden&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة السويد&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table113" msdata:rowOrder="113"&gt;
+                     &lt;COUNTRY_ID&gt;180&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;NORGE&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة النرويج&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table114" msdata:rowOrder="114"&gt;
+                     &lt;COUNTRY_ID&gt;200&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Kingdom of Thailand&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة تايلاند&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table115" msdata:rowOrder="115"&gt;
+                     &lt;COUNTRY_ID&gt;340&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Nepal&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;مملكة نيبال&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;1&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table116" msdata:rowOrder="116"&gt;
+                     &lt;COUNTRY_ID&gt;181&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;New Zealand&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;نيوزيلندا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table117" msdata:rowOrder="117"&gt;
+                     &lt;COUNTRY_ID&gt;54&lt;/COUNTRY_ID&gt;
+                     &lt;COUNTRY_E&gt;Yugoslavia&lt;/COUNTRY_E&gt;
+                     &lt;COUNTRY_A&gt;يوغسلافيا&lt;/COUNTRY_A&gt;
+                     &lt;NEEDLETTER&gt;2&lt;/NEEDLETTER&gt;
+                     &lt;CUSER&gt;Admin&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2007-02-01T13:21:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+               &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/Lookup_CountryResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Lookup_CountryResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Wed, 18 Feb 2015 12:48:15 GMT
+Content-Length: 32425
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_CountryResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Lookup_CountryResult</id>
+            </records>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>outputCountry</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//Lookup_CountryResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>countriesList</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//NewDataSet</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>countryID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/COUNTRY_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>countriesList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>countyName_en</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/COUNTRY_E</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>countriesList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>countyName_ar</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/COUNTRY_A</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>countriesList</value>
+        </outparam>
+        <password></password>
+        <postclassname>com.kony.process.PostCountriesEquivalency</postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Lookup_Country</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

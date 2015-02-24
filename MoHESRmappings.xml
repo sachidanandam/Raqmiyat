@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application id="MoHESR" name="MoHESR">
+    <container displayname="Popup" id="hdrCommon" type="dialog"/>
+    <container displayname="Popup" id="hdrNewUsrFrm" type="dialog"/>
+    <container displayname="Popup" id="segmentPopFileHeader" type="dialog"/>
+    <container displayname="Form" id="frmApplicationInquiryStatus" type="form"/>
+    <container displayname="Form" id="frmApplicationStatus" type="form">
+        <component displayname="TextBox2" id="txtBoxAppNum" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmApplicationStatusDetails" type="form"/>
+    <container displayname="Form" id="frmApplicationSubmit" type="form"/>
+    <container displayname="Form" id="frmAttestGrad1" type="form">
+        <component displayname="TextBox2" id="txtstudentname" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtTelephoneAreaCode" type="textbox2"/>
+        <component displayname="TextBox2" id="txtTelephoneNumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpobox" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownemirate" type="combobox"/>
+        <component displayname="TextBox2" id="txtemail" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmCertEnquApplicationSubmit" type="form"/>
+    <container displayname="Form" id="frmCertEquivalStaticPage" type="form"/>
+    <container displayname="Form" id="frmCertificateEquivalencyLanding" type="form"/>
+    <container displayname="Form" id="frmCurntStudStatic" type="form"/>
+    <container displayname="Form" id="frmFacultyStatic" type="form"/>
+    <container displayname="Form" id="frmFahim" type="form">
+        <component displayname="TextBox2" id="txtsearch" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownselectfaqcategory" type="combobox"/>
+    </container>
+    <container displayname="Form" id="frmGradStaticPage1" type="form"/>
+    <container displayname="Form" id="frmInquireAboutInstStaticPage" type="form"/>
+    <container displayname="Form" id="frmLogin" type="form">
+        <component displayname="TextBox2" id="txtusername" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmLoginAR" type="form">
+        <component displayname="TextBox2" id="txtusername" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmMainMenu" type="form"/>
+    <container displayname="Form" id="frmNewReg" type="form">
+        <component displayname="TextBox2" id="txtuserid" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtconfirmpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtname" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemailid" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassportnumber" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmPayment" type="form"/>
+    <container displayname="Popup" id="popFileExplorer" type="dialog"/>
+    <container displayname="Popup" id="reqdocumentspopus" type="dialog"/>
+    <container displayname="Form" id="frmAttestGrad1" type="form">
+        <component displayname="TextBox2" id="txtstudentname" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtTelephoneAreaCode" type="textbox2"/>
+        <component displayname="TextBox2" id="txtTelephoneNumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpobox" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownemirate" type="combobox"/>
+        <component displayname="TextBox2" id="txtemail" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmNewReg" type="form">
+        <component displayname="TextBox2" id="txtuserid" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtconfirmpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtname" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemailid" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassportnumber" type="textbox2"/>
+    </container>
+    <container displayname="Popup" id="hdrCommon" type="dialog"/>
+    <container displayname="Popup" id="hdrNewUsrFrm" type="dialog"/>
+    <container displayname="Popup" id="leftMenuTempCertAttest" type="dialog"/>
+    <container displayname="Popup" id="leftMenuTempCertEquival" type="dialog"/>
+    <container displayname="Popup" id="segmentPopFileHeader" type="dialog"/>
+    <container displayname="Form" id="frmApplicationInquiryStatus" type="form"/>
+    <container displayname="Form" id="frmApplicationStatus" type="form">
+        <component displayname="TextBox2" id="txtBoxAppNum" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmApplicationStatusDetails" type="form"/>
+    <container displayname="Form" id="frmApplicationSubmit" type="form"/>
+    <container displayname="Form" id="frmAttestGrad1" type="form">
+        <component displayname="TextBox2" id="txtstudentname" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtTelephoneAreaCode" type="textbox2"/>
+        <component displayname="TextBox2" id="txtTelephoneNumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpobox" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownemirate" type="combobox"/>
+        <component displayname="TextBox2" id="txtemail" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdowninstitue" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownstudylevel" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownmajor" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownSubMajor" type="combobox"/>
+        <component displayname="TextBox2" id="txtgraduatedyear" type="textbox2"/>
+        <component displayname="TextBox2" id="txtnoofdocuments" type="textbox2"/>
+        <component displayname="TextBox2" id="txtstudentid" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownpaymentmethod" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownpaymentcardtype" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownstudylevel1" type="combobox"/>
+        <component displayname="TextBox2" id="txtinstitutename" type="textbox2"/>
+        <component displayname="TextBox2" id="txtmajor" type="textbox2"/>
+        <component displayname="TextBox2" id="txtinstitutename2" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality1" type="combobox"/>
+        <component displayname="TextBox2" id="txtcredithours" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmCertEnquApplicationSubmit" type="form"/>
+    <container displayname="Form" id="frmCertEquivalStaticPage" type="form"/>
+    <container displayname="Form" id="frmCertEquivalencyTab1" type="form">
+        <component displayname="TextBox2" id="txtCertSubittedBy" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownStudyLevel" type="combobox"/>
+        <component displayname="TextBox2" id="txtMajor" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdowncountryofexam" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownemirate" type="combobox"/>
+        <component displayname="ComboBox" id="cmbTypeOfStudy" type="combobox"/>
+        <component displayname="TextBox2" id="txtBoxOthers" type="textbox2"/>
+        <component displayname="TextBox2" id="txtSponsoredBy" type="textbox2"/>
+        <component displayname="TextBox2" id="txtNoofyears" type="textbox2"/>
+        <component displayname="TextBox2" id="txtStartYear" type="textbox2"/>
+        <component displayname="TextBox2" id="txtGraduationYear" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownCountryWhereExam" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownpaymentmethodtype" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownpaymentcardtype" type="combobox"/>
+        <component displayname="TextBox2" id="txtNote" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmCertEquivalencyTab2" type="form">
+        <component displayname="TextBox2" id="txtUniversityOrCollege" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownTransfCountry" type="combobox"/>
+        <component displayname="TextBox2" id="txtTransfNoofyears" type="textbox2"/>
+        <component displayname="TextBox2" id="txtSchoolCollegeUniv" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownlevel" type="combobox"/>
+        <component displayname="TextBox2" id="txtCertificate" type="textbox2"/>
+        <component displayname="ComboBox" id="comboboxPreCertCountry" type="combobox"/>
+        <component displayname="TextBox2" id="txtPeriodFrom" type="textbox2"/>
+        <component displayname="TextBox2" id="txtPeriodTo" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmCertRequest" type="form">
+        <component displayname="TextBox2" id="txtuniversity" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdowncountryprevdegree" type="combobox"/>
+        <component displayname="TextBox2" id="txtDegree" type="textbox2"/>
+        <component displayname="TextBox2" id="txtMajor" type="textbox2"/>
+        <component displayname="TextBox2" id="txtYears" type="textbox2"/>
+        <component displayname="TextBox2" id="txtrequiredUniversity" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownrequiredCountry" type="combobox"/>
+        <component displayname="ComboBox" id="dropdownStudyLevel" type="combobox"/>
+        <component displayname="TextBox2" id="txtrequiredMajor" type="textbox2"/>
+        <component displayname="TextBox2" id="txtrequiredNoofYears" type="textbox2"/>
+        <component displayname="TextBox2" id="txtSemester" type="textbox2"/>
+        <component displayname="TextBox2" id="txtCreditHours" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownProgram" type="combobox"/>
+        <component displayname="TextBox2" id="txtName" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="TextBox2" id="txtTelephoneAreaCode" type="textbox2"/>
+        <component displayname="TextBox2" id="txtTelephoneNumber" type="textbox2"/>
+        <component displayname="TextBox2" id="txtFax" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemail" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownApplicantCountry" type="combobox"/>
+    </container>
+    <container displayname="Form" id="frmCertificateEquivalencyLanding" type="form"/>
+    <container displayname="Form" id="frmCommitteesDecisionStaticPg" type="form">
+        <component displayname="TextBox2" id="TxtApplicationNo" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownObjectionType" type="combobox"/>
+    </container>
+    <container displayname="Form" id="frmCurntStudStatic" type="form"/>
+    <container displayname="Form" id="frmFacultyStatic" type="form"/>
+    <container displayname="Form" id="frmFahim" type="form">
+        <component displayname="TextBox2" id="txtsearch" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownselectfaqcategory" type="combobox"/>
+    </container>
+    <container displayname="Form" id="frmGradStaticPage1" type="form"/>
+    <container displayname="Form" id="frmInquireAboutInstStaticPage" type="form"/>
+    <container displayname="Form" id="frmIntermediate" type="form"/>
+    <container displayname="Form" id="frmLogin" type="form">
+        <component displayname="TextBox2" id="txtusername" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmLoginAR" type="form">
+        <component displayname="TextBox2" id="txtusername" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmMainMenu" type="form"/>
+    <container displayname="Form" id="frmMainMenubk" type="form"/>
+    <container displayname="Form" id="frmMasterPg" type="form"/>
+    <container displayname="Form" id="frmNewReg" type="form">
+        <component displayname="TextBox2" id="txtuserid" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtconfirmpassword" type="textbox2"/>
+        <component displayname="TextBox2" id="txtname" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemailid" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownmobileareacode" type="combobox"/>
+        <component displayname="TextBox2" id="txtmobilenumber" type="textbox2"/>
+        <component displayname="ComboBox" id="dropdownnationality" type="combobox"/>
+        <component displayname="TextBox2" id="txtemiratesid1" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid2" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid3" type="textbox2"/>
+        <component displayname="TextBox2" id="txtemiratesid4" type="textbox2"/>
+        <component displayname="TextBox2" id="txtpassportnumber" type="textbox2"/>
+    </container>
+    <container displayname="Form" id="frmPayment" type="form"/>
+    <container displayname="Popup" id="popAttachmentConfirmation" type="dialog"/>
+    <container displayname="Popup" id="popFileExplorer" type="dialog"/>
+    <container displayname="Popup" id="popPortraitAttestHeader" type="dialog"/>
+    <container displayname="Popup" id="popUpCertEquivalency" type="dialog"/>
+    <container displayname="Popup" id="poplandattest" type="dialog"/>
+    <container displayname="Popup" id="reqdocumentspopus" type="dialog"/>
+    <globalsequences/>
+    <skins/>
+</application>

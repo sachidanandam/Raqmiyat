@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Equ_Select_Cert</id>
+        <ignoreProxy>false</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>APP_NO</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>201501403</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>wsUsrId</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>webservice</testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>wsPwd</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source></source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue>wEbsErViCe$35#</testvalue>
+            <value></value>
+        </inparam>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Select_Cert&gt;
+         &lt;moh:AppNo&gt;$APP_NO&lt;/moh:AppNo&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;$wsUsrId&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;$wsPwd&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut/&gt;
+      &lt;/moh:Select_Cert&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_Cert</id>
+            <params>
+                <accessType></accessType>
+                <format>int</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>AppNo</name>
+                <type>java.lang.Integer</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Select_Cert</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Select_CertResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Select_CertResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="Table"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_NO" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_NO" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_TITLE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="MAJOR" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SPECIALIZATION" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ISSUE_INST" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ISSUE_ORG" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ISSUE_ORG_CNT" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_THESIS" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="IS_COMPREHENSIVE_EXAM" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYTYPE_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYTYPE_OTH" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYAREA_CODE" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOF_YEARS" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOF_TERMS" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOF_HOURS" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="AVG_GRADE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SPONSER_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SPONSER_AUTH" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDY_START_DT" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="GRADUATION_DT" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EXAM_HELD_COUNTRY_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STATUS_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOF_CERTS" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOF_DOCS" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_AMOUNT" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="DOCS_SUBMITTED" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_COMMITTEE_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="RECORD_NO" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="PURPOSE_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="PURPOSE_OTH" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="REASON_APPLY" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EQUI_REQUEST_BY" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="EQUALIZER_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_DECISION" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_MAJOR" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_COMMITTEE_TYPE" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_RECEIPT" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_EAED_NO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOTE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="UUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="UDATE" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CDATE" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SLACCNACC" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOFORGDOCS1" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOOFORGDOCS2" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_ACCNACC" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NOSECONDARY" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="FILE_NO" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CERT_DT" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NAME_OLD" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="GENDER_OLD" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="NAT_ID_OLD" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="APP_NO_OLD" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="PRE_CERT_OLD" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="INST_BRANCH" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="IS_ASSIGN" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="DOC_RECIEV" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="INPOSTNO" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="INPOSTDT" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SMSSENT" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="INPOSTREC" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SENT_TO_EQUI" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SENT_DATETIME" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="SENT_NOTES" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="BRANCH_ID" type="xs:decimal"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;NewDataSet xmlns=""&gt;
+                  &lt;Table diffgr:id="Table1" msdata:rowOrder="0"&gt;
+                     &lt;APP_NO&gt;201501403&lt;/APP_NO&gt;
+                     &lt;CERT_NO&gt;1059539&lt;/CERT_NO&gt;
+                     &lt;CERT_TITLE&gt;Aravind &lt;/CERT_TITLE&gt;
+                     &lt;MAJOR&gt;B.tech&lt;/MAJOR&gt;
+                     &lt;CERT_ISSUE_ORG&gt;2&lt;/CERT_ISSUE_ORG&gt;
+                     &lt;CERT_ISSUE_ORG_CNT&gt;768&lt;/CERT_ISSUE_ORG_CNT&gt;
+                     &lt;STUDYTYPE_ID&gt;5&lt;/STUDYTYPE_ID&gt;
+                     &lt;STUDYLEVEL_ID&gt;31&lt;/STUDYLEVEL_ID&gt;
+                     &lt;NOOF_YEARS&gt;51.00&lt;/NOOF_YEARS&gt;
+                     &lt;NOOF_TERMS&gt;6&lt;/NOOF_TERMS&gt;
+                     &lt;NOOF_HOURS&gt;10&lt;/NOOF_HOURS&gt;
+                     &lt;SPONSER_ID&gt;1&lt;/SPONSER_ID&gt;
+                     &lt;SPONSER_AUTH&gt;gg&lt;/SPONSER_AUTH&gt;
+                     &lt;STUDY_START_DT&gt;2008&lt;/STUDY_START_DT&gt;
+                     &lt;GRADUATION_DT&gt;2008&lt;/GRADUATION_DT&gt;
+                     &lt;EXAM_HELD_COUNTRY_ID&gt;10&lt;/EXAM_HELD_COUNTRY_ID&gt;
+                     &lt;NOOF_DOCS&gt;0&lt;/NOOF_DOCS&gt;
+                     &lt;UUSER&gt;ONLINE&lt;/UUSER&gt;
+                     &lt;UDATE&gt;2015-01-30T16:46:34+04:00&lt;/UDATE&gt;
+                     &lt;CUSER&gt;ONLINE&lt;/CUSER&gt;
+                     &lt;CDATE&gt;2015-01-30T16:46:34+04:00&lt;/CDATE&gt;
+                  &lt;/Table&gt;
+               &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/Select_CertResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Select_CertResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Wed, 18 Feb 2015 12:43:03 GMT
+Content-Length: 6115
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Select_CertResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Select_CertResult</id>
+            </records>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>output</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//Select_CertResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>certdetails</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//NewDataSet</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>APP_NO</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/APP_NO</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>CERT_NO</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/CERT_NO</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>STUDYLEVEL_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYLEVEL_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>MAJOR</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/MAJOR</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>SPECIALIZATION</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/SPECIALIZATION</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>CERT_ISSUE_ORG</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/CERT_ISSUE_ORG</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>CERT_ISSUE_ORG_CNT</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/CERT_ISSUE_ORG_CNT</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>STUDYTYPE_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYTYPE_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>STUDYTYPE_OTH</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYTYPE_OTH</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>SPONSER_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/SPONSER_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>SPONSER_AUTH</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/SPONSER_AUTH</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>NOOF_YEARS</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/NOOF_YEARS</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>NOOF_TERMS</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/NOOF_TERMS</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>NOOF_HOURS</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/NOOF_HOURS</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>STUDY_START_DT</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDY_START_DT</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>GRADUATION_DT</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/GRADUATION_DT</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>EXAM_HELD_COUNTRY_ID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/EXAM_HELD_COUNTRY_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>CERT_TITLE</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/CERT_TITLE</source>
+            <srcformatvalue></srcformatvalue>
+            <target>response</target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>certdetails</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Select_Cert</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

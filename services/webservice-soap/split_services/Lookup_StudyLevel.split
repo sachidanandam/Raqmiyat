@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsObject>
+    <appSmsCode></appSmsCode>
+    <soapservice>
+        <authenticationMode>basic</authenticationMode>
+        <cacheduration></cacheduration>
+        <cacheable>false</cacheable>
+        <dataprovider></dataprovider>
+        <dcResponse/>
+        <encryptPwd>true</encryptPwd>
+        <escapeXML>false</escapeXML>
+        <id>Lookup_StudyLevel</id>
+        <ignoreProxy>true</ignoreProxy>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>user</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </inparam>
+        <inparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>password</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>request</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </inparam>
+        <intemplate>&lt;soapenv:Envelope xmlns:moh="http://www.mohesr.ae/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+   &lt;soapenv:Header/&gt;
+   &lt;soapenv:Body&gt;
+      &lt;moh:Lookup_StudyLevel&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:user&gt;webservice&lt;/moh:user&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:password&gt;wEbsErViCe$35#&lt;/moh:password&gt;
+         &lt;!--Optional:--&gt;
+         &lt;moh:outPut&gt;&lt;/moh:outPut&gt;
+      &lt;/moh:Lookup_StudyLevel&gt;
+   &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+</intemplate>
+        <inputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_StudyLevel</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>user</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>password</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+        </inputStructure>
+        <ntlmDomain></ntlmDomain>
+        <ntlmHost></ntlmHost>
+        <operationname>Lookup_StudyLevel</operationname>
+        <outtemplate>&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;soap:Body&gt;
+      &lt;Lookup_StudyLevelResponse xmlns="http://www.mohesr.ae/"&gt;
+         &lt;Lookup_StudyLevelResult&gt;
+            &lt;xs:schema xmlns="" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="NewDataSet"&gt;
+               &lt;xs:element msdata:IsDataSet="true" msdata:MainDataTable="Table" msdata:UseCurrentLocale="true" name="NewDataSet"&gt;
+                  &lt;xs:complexType&gt;
+                     &lt;xs:choice maxOccurs="unbounded" minOccurs="0"&gt;
+                        &lt;xs:element name="Table"&gt;
+                           &lt;xs:complexType&gt;
+                              &lt;xs:sequence&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_ID" type="xs:decimal"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_E" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_A" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STUDYLEVEL_A_DE" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CUSER" type="xs:string"/&gt;
+                                 &lt;xs:element minOccurs="0" name="CDATE" type="xs:dateTime"/&gt;
+                                 &lt;xs:element minOccurs="0" name="STATUS_ID" type="xs:decimal"/&gt;
+                              &lt;/xs:sequence&gt;
+                           &lt;/xs:complexType&gt;
+                        &lt;/xs:element&gt;
+                     &lt;/xs:choice&gt;
+                  &lt;/xs:complexType&gt;
+               &lt;/xs:element&gt;
+            &lt;/xs:schema&gt;
+            &lt;diffgr:diffgram xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+               &lt;NewDataSet xmlns=""&gt;
+                  &lt;Table diffgr:hasChanges="inserted" diffgr:id="Table9" msdata:rowOrder="0"&gt;
+                     &lt;STUDYLEVEL_ID&gt;0&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E/&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table1" msdata:rowOrder="1"&gt;
+                     &lt;STUDYLEVEL_ID&gt;1&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Ph.D.&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;د ك&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;دكتوراه&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table2" msdata:rowOrder="2"&gt;
+                     &lt;STUDYLEVEL_ID&gt;2&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Master&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;مج&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;ماجستير&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table3" msdata:rowOrder="3"&gt;
+                     &lt;STUDYLEVEL_ID&gt;3&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Post Graduate Diploma&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;د ب.ع&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;دبلوم الدراسات العليا&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table4" msdata:rowOrder="4"&gt;
+                     &lt;STUDYLEVEL_ID&gt;4&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Bachelor&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;بك&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;بكالوريوس&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table5" msdata:rowOrder="5"&gt;
+                     &lt;STUDYLEVEL_ID&gt;5&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Associate Diploma&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;د ب.م&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;دبلوم متوسط&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table6" msdata:rowOrder="6"&gt;
+                     &lt;STUDYLEVEL_ID&gt;6&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Certificate&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;شه&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;شهادة&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table7" msdata:rowOrder="7"&gt;
+                     &lt;STUDYLEVEL_ID&gt;31&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Zamala&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;زما&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;زمالة&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+                  &lt;Table diffgr:id="Table8" msdata:rowOrder="8"&gt;
+                     &lt;STUDYLEVEL_ID&gt;32&lt;/STUDYLEVEL_ID&gt;
+                     &lt;STUDYLEVEL_E&gt;Diploma&lt;/STUDYLEVEL_E&gt;
+                     &lt;STUDYLEVEL_A&gt;د ب&lt;/STUDYLEVEL_A&gt;
+                     &lt;STUDYLEVEL_A_DE&gt;دبلوم&lt;/STUDYLEVEL_A_DE&gt;
+                     &lt;CDATE&gt;2007-02-01T17:18:22+04:00&lt;/CDATE&gt;
+                     &lt;STATUS_ID&gt;1&lt;/STATUS_ID&gt;
+                  &lt;/Table&gt;
+               &lt;/NewDataSet&gt;
+            &lt;/diffgr:diffgram&gt;
+         &lt;/Lookup_StudyLevelResult&gt;
+         &lt;outPut&gt;SUCCESS&lt;/outPut&gt;
+      &lt;/Lookup_StudyLevelResponse&gt;
+   &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+</outtemplate>
+        <outTemplateHeader>X-AspNet-Version: 2.0.50727
+Date: Wed, 18 Feb 2015 12:48:49 GMT
+Content-Length: 3830
+Content-Type: text/xml; charset=utf-8
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/7.5
+Cache-Control: private, max-age=0
+</outTemplateHeader>
+        <outputStructure>
+            <index>-1</index>
+            <order>0</order>
+            <id>Lookup_StudyLevelResponse</id>
+            <params>
+                <accessType></accessType>
+                <format>string</format>
+                <formatValue></formatValue>
+                <jsValue></jsValue>
+                <name>outPut</name>
+                <type>java.lang.String</type>
+                <value></value>
+            </params>
+            <records>
+                <index>-1</index>
+                <order>0</order>
+                <id>Lookup_StudyLevelResult</id>
+            </records>
+        </outputStructure>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>outputstudylevel</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//Lookup_StudyLevelResponse/outPut</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>studyLevelList</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>//NewDataSet</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value></value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>studyLevelID</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYLEVEL_ID</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>studyLevelList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>studyLevel_en</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYLEVEL_E</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>studyLevelList</value>
+        </outparam>
+        <outparam>
+            <category></category>
+            <datatype>string</datatype>
+            <defaultvalue></defaultvalue>
+            <description></description>
+            <encode>true</encode>
+            <format>None</format>
+            <formatvalue></formatvalue>
+            <id>studyLevel_ar</id>
+            <invalue></invalue>
+            <name></name>
+            <order></order>
+            <passNull>false</passNull>
+            <recordid></recordid>
+            <smsname></smsname>
+            <source>Table/STUDYLEVEL_A</source>
+            <srcformatvalue></srcformatvalue>
+            <target></target>
+            <targetdatatype></targetdatatype>
+            <testvalue></testvalue>
+            <value>studyLevelList</value>
+        </outparam>
+        <password></password>
+        <postclassname></postclassname>
+        <preclassname></preclassname>
+        <proxyname></proxyname>
+        <proxyport></proxyport>
+        <proxypwd></proxypwd>
+        <proxyuserid></proxyuserid>
+        <responseencoding>UTF-8</responseencoding>
+        <sharePoint>false</sharePoint>
+        <smscode></smscode>
+        <smsenabled>false</smsenabled>
+        <soapaction>http://www.mohesr.ae/Lookup_StudyLevel</soapaction>
+        <timeout></timeout>
+        <url>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx</url>
+        <urlprovider></urlprovider>
+        <userid></userid>
+        <version>1.1</version>
+        <wsdlurl>https://services.mohesr.gov.ae/MobileEquiDev/Equi.asmx?wsdl</wsdlurl>
+    </soapservice>
+    <sharePointRoot>
+        <name>SharePoint Servers</name>
+    </sharePointRoot>
+    <wsdlroot>
+        <wsdltree>
+            <name>Web Services</name>
+        </wsdltree>
+    </wsdlroot>
+</xsObject>

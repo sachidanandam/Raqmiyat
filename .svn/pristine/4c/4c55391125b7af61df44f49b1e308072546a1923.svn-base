@@ -1,0 +1,176 @@
+function attest1AdjustFooter() //adjust footer for general information details page
+{
+    frmAttestGrad1.btnPrev.skin = "sknBtnInvisible";
+    frmAttestGrad1.btnNext.onClick = goTofrm2;
+    frmAttestGrad1.btnNext.skin = "sknBtnNext";
+    frmAttestGrad1.lblSteps.text = kony.i18n.getLocalizedString("lblStep1"); //"Step 1 of 3";
+    if (selectedCategory == category_Graduate) {
+        frmAttestGrad1.lblCategory.text = kony.i18n.getLocalizedString("lblGraduate");
+    } else if (selectedCategory == category_Enrolled) {
+        // define i18n 
+        frmAttestGrad1.lblCategory.text = kony.i18n.getLocalizedString("lblEnrolled");
+    } else {
+        // define i18n 
+        frmAttestGrad1.lblCategory.text = kony.i18n.getLocalizedString("lblStaff");
+        frmAttestGrad1.lblSteps.text = kony.i18n.getLocalizedString("lblStep1Of2");
+    }
+}
+
+function attest2AdjustFooter() //adjust footer for study details page
+{
+    frmAttestGrad2.btnPrev.skin = "sknBtnPrev";
+    frmAttestGrad2.btnNext.skin = "sknBtnNext";
+    frmAttestGrad2.btnPrev.onClick = goTofrm1;
+    frmAttestGrad2.btnNext.onClick = goTofrm3;
+    frmAttestGrad2.lblSteps.text = kony.i18n.getLocalizedString("lblStep2"); //"Step 2 of 3";
+    if (selectedCategory == category_Graduate) {
+        frmAttestGrad2.lblCategory.text = kony.i18n.getLocalizedString("lblGraduate");
+        frmAttestGrad2.lblstudydetails.text = kony.i18n.getLocalizedString("lblStudyDetails"); //"Study Details";
+        frmAttestGrad2.lblGraduatedYear.setVisibility(true);
+        frmAttestGrad2.txtgraduatedyear.setVisibility(true);
+        frmAttestGrad2.lineGraduated.setVisibility(true);
+        frmAttestGrad2.hbxCamStaff.setVisibility(false);
+        frmAttestGrad2.hbxStudyDetails.setVisibility(true);
+        frmAttestGrad2.lblStudentID.setVisibility(true);
+        frmAttestGrad2.txtstudentid.setVisibility(true);
+        frmAttestGrad2.lineStudyDetails.setVisibility(true);
+        frmAttestGrad2.lineStudentID.setVisibility(true);
+        frmAttestGrad2.lblSubMajor.setVisibility(false);
+        frmAttestGrad2.dropdownSubMajor.setVisibility(false);
+        frmAttestGrad2.lineSubmajor.setVisibility(false);
+    } else if (selectedCategory == category_Enrolled) {
+        // define i18n 
+        frmAttestGrad2.lblCategory.text = kony.i18n.getLocalizedString("lblEnrolled");
+        frmAttestGrad2.lblGraduatedYear.setVisibility(false);
+        frmAttestGrad2.txtgraduatedyear.setVisibility(false);
+        frmAttestGrad2.lineGraduated.setVisibility(false);
+        frmAttestGrad2.hbxCamStaff.setVisibility(false);
+        frmAttestGrad2.hbxStudyDetails.setVisibility(true);
+        frmAttestGrad2.lblStudentID.setVisibility(true);
+        frmAttestGrad2.txtstudentid.setVisibility(true);
+        frmAttestGrad2.lineStudyDetails.setVisibility(true);
+        frmAttestGrad2.lineStudentID.setVisibility(true);
+        frmAttestGrad2.lblSubMajor.setVisibility(true);
+        frmAttestGrad2.dropdownSubMajor.setVisibility(true);
+        frmAttestGrad2.lineSubmajor.setVisibility(true);
+    } else {
+        frmAttestGrad2.hbxCamStaff.setVisibility(true);
+        frmAttestGrad2.hbxStudyDetails.setVisibility(false);
+        frmAttestGrad2.lineStudyDetails.setVisibility(false);
+        frmAttestGrad2.txtgraduatedyear.setVisibility(false);
+        frmAttestGrad2.lblGraduatedYear.setVisibility(false);
+        frmAttestGrad2.lineGraduated.setVisibility(false);
+        frmAttestGrad2.lblStudentID.setVisibility(false);
+        frmAttestGrad2.txtstudentid.setVisibility(false);
+        frmAttestGrad2.lineStudentID.setVisibility(false);
+        frmAttestGrad2.lblSubMajor.setVisibility(false);
+        frmAttestGrad2.dropdownSubMajor.setVisibility(false);
+        frmAttestGrad2.lineSubmajor.setVisibility(false);
+        frmAttestGrad2.lblstudydetails.text = kony.i18n.getLocalizedString("lblInstitutionDetails");
+        // define i18n 
+        frmAttestGrad2.lblCategory.text = kony.i18n.getLocalizedString("lblStaff");
+        frmAttestGrad2.lblSteps.text = kony.i18n.getLocalizedString("lblStep2Of2");
+        frmAttestGrad2.btnNext.skin = "sknBtnNextInact";
+        frmAttestGrad2.btnNext.focusSkin = "sknBtnNextInact";
+        frmAttestGrad2.btnNext.onClick = doNothing;
+    }
+}
+
+function attest3AdjustFooter() //adjust footer for previous study details page
+{
+    frmAttestGrad3.btnNext.skin = "sknBtnNextInact";
+    frmAttestGrad3.btnPrev.skin = "sknBtnPrev";
+    //frmAttestGrad3.btnPrev.onClick = goTofrm2;
+    frmAttestGrad3.btnPrev.onClick = showFrm2;
+    frmAttestGrad3.btnNext.onClick = doNothing;
+    frmAttestGrad3.lblSteps.text = kony.i18n.getLocalizedString("lblStep3"); //"Step 3 of 3";
+    if (selectedCategory == category_Graduate) {
+        frmAttestGrad3.lblCategory.text = kony.i18n.getLocalizedString("lblGraduate");
+    } else if (selectedCategory == category_Enrolled) {
+        // define i18n 
+        frmAttestGrad3.lblCategory.text = kony.i18n.getLocalizedString("lblEnrolled");
+    } else // never comes here, since Staff attestation flow has only two forms
+    {
+        //
+    }
+}
+
+function showFrm2() {
+    frmAttestGrad2.show();
+}
+
+function goTofrm3() {
+    createAttestGrad2Obj();
+    var areFieldsProper = checkFieldsStep2();
+    if (areFieldsProper == false) return;
+    if (selectedCategory == category_Graduate) getPrevStudyLevels();
+    else frmAttestGrad3.show();
+}
+//doing additional adjustments because for frmAttestGrad1, the adjustment is in post show,
+// so to avoid the delay, adjusting while navigating itself
+function goTofrm1() {
+    frmAttestGrad1.show();
+}
+
+function goTofrm2() {
+    var areFieldsProper = checkFieldsStep1();
+    if (areFieldsProper == false) return;
+    createAttestGrad1Obj();
+    getInstitutesList();
+    //	frmAttestGrad2.show();
+}
+
+function doNothing() {
+    //
+}
+
+function onVbxGraduateClick() {
+    selectedCategory = category_Graduate;
+    //logic to set proper UI adjustments based upon selectedCategory to be written here
+    //frmAttestGrad1.show();
+    frmGradStaticPage1.show();
+}
+
+function onVbxCurrentClick() {
+    selectedCategory = category_Enrolled;
+    //frmAttestGrad1.show();
+}
+
+function onVbxFacultyClick() {
+    selectedCategory = category_Faculty;
+    //frmAttestGrad1.show();
+}
+
+function onBtnClickSignIn() {
+    var isLoginCorrect = validateLogin();
+    if (isLoginCorrect == false) return;
+    //	frmMainMenu.show();
+    validateUser();
+}
+
+function onBtnClickSubmitAttestStep3() {
+    var areAllFieldsCorrect = checkFieldsStep3();
+    if (areAllFieldsCorrect == false) return;
+    //alert("Successfully registered");
+    //frmMainMenu.show();
+    if (isCaptureMaxlengthExceeds == false) invokeInsertApp();
+    else {
+        frmAttachmentConfirmation.show();
+    }
+}
+
+function loadi18GraStudStep1() {
+    frmGradStaticPage1.browGradInsStep1.htmlString = kony.i18n.getLocalizedString("lblGradStaticTextStep1");
+}
+
+function loadi18GraStudStep2() {
+    frmGradStaticPage2.browGradInsStep2.htmlString = kony.i18n.getLocalizedString("lblGradStaticTextStep2");
+}
+
+function loadi18CurStud() {
+    frmCurntStudStatic.browCurStudIns.htmlString = kony.i18n.getLocalizedString("lblCurStudStatic");
+}
+
+function loadi18FacMembers() {
+    frmFacultyStatic.browFacIns.htmlString = kony.i18n.getLocalizedString("lblFacStaticText");
+}

@@ -1,0 +1,1229 @@
+var attesGradObj = new Object();
+var gblAppNoFromInsertApp = "";
+isPreStudyLevel=1;
+isPurpose=true;
+isAttes=true;
+var gblLoggedUserID = "";
+var AttestCamBase64 = "";
+isSaveAttach=true;
+attachLength=0;
+isCaptureMaxlengthExceeds=false;
+
+function validateUser(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_CheckUser",
+	        user: "Webservice",
+	        password: "wEbsErViCe$35#",
+	        userName:(kony.application.getCurrentForm().id == "frmLogin")?frmLogin.txtusername.text:frmLoginAR.txtusername.text,
+	        userPassword:(kony.application.getCurrentForm().id == "frmLogin")?frmLogin.txtpassword.text:frmLoginAR.txtpassword.text
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, validateUserCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function validateUserCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["result"] == "0" || result["result"] == 0){
+					dismissLoadingIndicator();
+					alert("Invalid username and password");
+				}
+				else{
+					gblLoggedUserID = result["result"];
+					dismissLoadingIndicator();
+					frmMainMenu.show();
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function checkUserName(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_ValidUser",
+	        user: "Webservice",
+	        password: "wEbsErViCe$35#",
+	        userName:frmNewReg.txtuserid.text
+	        
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, checkUserNameCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function checkUserNameCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["output"] == "FAIL"){
+					dismissLoadingIndicator();
+					frmNewReg.button155182739504172.setEnabled(true);
+				}
+				else{
+					dismissLoadingIndicator();
+					frmNewReg.txtuserid.setFocus(true);
+					alert("Userid already exists!!");
+					frmNewReg.button155182739504172.setEnabled(false);
+				}
+			}
+			else{
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+
+function insertNewUser(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Insert_NewUser",
+	        isNew: "true",
+	        userID: "0",
+	        appName: frmNewReg.txtname.text, 
+	        nationalityId: frmNewReg.dropdownnationality.selectedKey,
+	        userName: frmNewReg.txtuserid.text,
+	        userPassword: frmNewReg.txtpassword.text,
+	        mobile: frmNewReg.txtmobilenumber.text,
+	        email: frmNewReg.txtemailid.text,
+	        emiratesId: frmNewReg.txtemiratesid1.text +"-"+ frmNewReg.txtemiratesid2.text +"-"+ frmNewReg.txtemiratesid3.text +"-"+ frmNewReg.txtemiratesid4.text,
+	        mobileCountryCode: "971",
+	        mobileCode: frmNewReg.dropdownmobileareacode.selectedKey,
+	        passportNo: frmNewReg.txtpassportnumber.text,
+	        user: "Webservice",
+	        password: "wEbsErViCe$35#",
+	        userIDRes: "0",
+	        output: ""
+	        
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, insertNewUserCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function insertNewUserCallback(status, result) {
+	try{
+		if (status == 400) {
+			if (kony.os.toNumber(result.opstatus) == 0) {
+				kony.print("result data is------------",result);
+				if(result["resultNew"] == "true" || result["resultNew"] == true){
+					//saveAttachmetNewUser();
+					if(isSaveAttach==true)
+						saveAttachmetNewUser();
+					else{
+						dismissLoadingIndicator();
+						alert("Inserted New user successfully with out Attachment.")
+						if(isArabicLocale == true)
+							frmLoginAR.show();
+						else
+							frmLogin.show();
+					}
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("user insertion fail..");
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("Failed to Insert New user");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function saveAttachmetNewUser(){
+	try{
+		var inputparam = {
+	        serviceID: "SaveUserAttachment",
+	        user: "Webservice",
+	        password: "wEbsErViCe$35#",
+	        userID:frmNewReg.txtuserid.text,
+	        content: camBase64,
+	        fileName: frmNewReg.txtuserid.text,
+	        output: ""
+	        
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, saveAttachmetNewUserCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function saveAttachmetNewUserCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["result"] == "true"){
+					dismissLoadingIndicator();
+					alert("Inserted New user successfully");
+					if(isArabicLocale == true)
+						frmLoginAR.show();
+					else
+						frmLogin.show();
+				}else{
+					dismissLoadingIndicator();
+					alert("Inserted New user successfully and Error in sending Attachment.")
+					if(isArabicLocale == true)
+						frmLoginAR.show();
+					else
+						frmLogin.show();
+				}
+				
+					
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function saveAttachmetAttestation(){
+	try{
+		var inputparam = {
+	        serviceID: "SaveAttachment",
+	        userAtt: "Webservice",
+	        passwordAtt: "wEbsErViCe$35#",
+	        appNOAtt:gblAppNoFromInsertApp,
+	        contentAtt: AttestCamBase64,//camBase64,
+	        fileNameAtt: gblLoggedUserID+"_"+selectedCategory,
+	        output: ""
+	        
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, saveAttachmetAttestationCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function saveAttachmetAttestationCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["resultAtt"] == "true"){
+					dismissLoadingIndicator();
+					
+					frmApplicationSubmit.show();
+				}else{
+					dismissLoadingIndicator();
+					alert("Attachment Failed");
+					frmApplicationSubmit.show();
+				}
+				
+					
+			}
+			else{
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+
+function invokeCompositService(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "getCountriesAndMobileCodes",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        userCountry:"Webservice",
+	        passwordCountry:"wEbsErViCe$35#",
+	        userEmirates:"Webservice",
+	        passwordEmirates:"wEbsErViCe$35#"
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, compositCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function compositCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["outputCountry"] == "SUCCESS" && result["output"] == "SUCCESS" && result["emiratesOutput"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["countriesList"].length;i++){
+						var key = result["countriesList"][i]["countryID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["countriesList"][i]["countyName_ar"];
+						else
+							value = result["countriesList"][i]["countyName_en"];
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					var comboboxMobCodesData = [];
+					for(var i=0;i<result["mobCodes"].length;i++){
+						var key = result["mobCodes"][i]["mobileCode"];
+						var value = result["mobCodes"][i]["mobileCode"];
+						comboboxMobCodesData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					var comboboxEmiratesData = [];
+					for(var i=0;i<result["emiratesList"].length;i++){
+						var key = result["emiratesList"][i]["emirateID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["emiratesList"][i]["emirateName_ar"];
+						else
+							value = result["emiratesList"][i]["emirateName_en"];
+							
+						comboboxEmiratesData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					frmAttestGrad1.dropdownnationality.masterDataMap=[comboboxData,"mykey","myvalue"];
+					frmAttestGrad1.dropdownmobileareacode.masterDataMap=[comboboxMobCodesData,"mykey","myvalue"];
+					frmAttestGrad1.dropdownemirate.masterDataMap = [comboboxEmiratesData,"mykey","myvalue"];
+					
+					if(selectedCategory == category_Graduate || selectedCategory == category_Enrolled)
+						frmAttestGrad3.dropdownnationality.masterDataMap=[comboboxData,"mykey","myvalue"];
+					
+					getUserDataToAuto();
+					
+					dismissLoadingIndicator();
+					frmAttestGrad1.show();
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!")
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!")
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+
+function invokeRegistrationCompositService(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "registrationComposit",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        userCountry:"Webservice",
+	        passwordCountry:"wEbsErViCe$35#"
+	        
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, registrationCompositCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function registrationCompositCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["outputCountry"] == "SUCCESS" && result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["countriesList"].length;i++){
+						var key = result["countriesList"][i]["countryID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA") 
+							value = result["countriesList"][i]["countyName_ar"];
+						else
+							value = result["countriesList"][i]["countyName_en"];
+							
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					var comboboxMobCodesData = [];
+					for(var i=0;i<result["mobCodes"].length;i++){
+						var key = result["mobCodes"][i]["mobileCode"];
+						var value = result["mobCodes"][i]["mobileCode"];
+						comboboxMobCodesData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					frmNewReg.dropdownnationality.masterDataMap = [comboboxData,"mykey","myvalue"];
+					frmNewReg.dropdownmobileareacode.masterDataMap = [comboboxMobCodesData,"mykey","myvalue"];
+					
+					dismissLoadingIndicator();
+					
+					frmNewReg.show();
+					
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!")
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+
+
+function getInstitutesList(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_Institutes",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#"
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getInstitutesListCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getInstitutesListCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["instList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					comboboxData=[{"mykey":"SI","myvalue":kony.i18n.getLocalizedString("lblPleaseSelectInstitute")}];
+					for(var i=0;i<result["instList"].length;i++){
+						var key = result["instList"][i]["instNo"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["instList"][i]["instName_ar"];
+						else
+							value = result["instList"][i]["instName_en"];
+							
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					frmAttestGrad2.dropdowninstitue.masterDataMap=[comboboxData,"mykey","myvalue"];
+					frmAttestGrad2.dropdowninstitue.selectedKey = "SI"; 
+					getPaymentMethodTypes();
+					
+				}else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getStudyLevels(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_StudyLevel",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        instNo:frmAttestGrad2.dropdowninstitue.selectedKey
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getStudyLevelsCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getStudyLevelsCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["studyLevelList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["studyLevelList"].length;i++){
+						var key = result["studyLevelList"][i]["studyLevelID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["studyLevelList"][i]["studyLevel_ar"];
+						else
+							value = result["studyLevelList"][i]["studyLevel_en"];
+						
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					frmAttestGrad2.dropdownstudylevel.masterDataMap=[comboboxData,"mykey","myvalue"];
+					dismissLoadingIndicator();
+					//frmStudyDetails.comboNationality.selectedKey = "0";
+				
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPrevStudyLevels(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_PrevStudyLevel",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        output:""
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getPrevStudyLevelsCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPrevStudyLevelsCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["studyLevelList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["studyLevelList"].length;i++){
+						var key = result["studyLevelList"][i]["studyLevelID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["studyLevelList"][i]["studyLevel_ar"];
+						else
+							value = result["studyLevelList"][i]["studyLevel_en"];
+						
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					
+					frmAttestGrad3.dropdownstudylevel.masterDataMap=[comboboxData,"mykey","myvalue"];
+					dismissLoadingIndicator();
+					frmAttestGrad3.show();
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getMajor(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_Major",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        instNo:frmAttestGrad2.dropdowninstitue.selectedKey,
+	        studyLevel:frmAttestGrad2.dropdownstudylevel.selectedKey
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getMajorCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getMajorCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["pgList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["pgList"].length;i++){
+						var key = result["pgList"][i]["pgNo"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["pgList"][i]["pgName_ar"];
+						else
+							value = result["pgList"][i]["pgName_en"];
+						
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					frmAttestGrad2.dropdownmajor.masterDataMap=[comboboxData,"mykey","myvalue"];
+					dismissLoadingIndicator();
+					//frmStudyDetails.comboNationality.selectedKey = "0";
+				
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function currSubMajorDecision(){
+	if(selectedCategory == category_Enrolled)
+		getSubMajor();
+}
+function getSubMajor(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_SubMajor",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        instID:frmAttestGrad2.dropdowninstitue.selectedKey,
+	        levelID:frmAttestGrad2.dropdownstudylevel.selectedKey,
+	        majorID: frmAttestGrad2.dropdownmajor.selectedKey,
+	        output:""
+	            
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getSubMajorCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getSubMajorCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["pgList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["pgList"].length;i++){
+						var key = result["pgList"][i]["pgNo"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["pgList"][i]["pgName_ar"];
+						else
+							value = result["pgList"][i]["pgName_en"];
+						
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					frmAttestGrad2.dropdownSubMajor.masterDataMap=[comboboxData,"mykey","myvalue"];
+					dismissLoadingIndicator();
+					//frmStudyDetails.comboNationality.selectedKey = "0";
+				
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPaymentMethodTypes(){
+	try{
+		var inputparam = {
+	        serviceID: "Select_PaymentMethodType",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#"
+	         
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getPaymentMethodTypesCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPaymentMethodTypesCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					comboboxData=[{"mykey":"SPMT","myvalue":kony.i18n.getLocalizedString("lblPleaseSelectProperPayment")}];
+					for(var i=0;i<result["paymentsList"].length;i++){
+						var key = result["paymentsList"][i]["paymentMethodTypelID"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["paymentsList"][i]["paymentMethodType_ar"];
+						else
+							value = result["paymentsList"][i]["paymentMethodType_en"];
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					frmAttestGrad2.dropdownpaymentmethod.masterDataMap=[comboboxData,"mykey","myvalue"];
+					frmAttestGrad2.dropdownpaymentmethod.selectedKey = "SPMT";
+					dismissLoadingIndicator();
+					frmAttestGrad2.show();
+				
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPaymentMethods(){
+	try{
+		showLoadingIndicator();
+		var inputparam = {
+	        serviceID: "Select_PaymentMethod",
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        paymentMethodTypeID:frmAttestGrad2.dropdownpaymentmethod.selectedKey,
+	        output:""	         
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getPaymentMethodsCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getPaymentMethodsCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result["paymentMethodsList"]);
+				if(result["output"] == "SUCCESS"){
+					var comboboxData = [];
+					for(var i=0;i<result["paymentMethodsList"].length;i++){
+						var key = result["paymentMethodsList"][i]["paymentMethodCode"];
+						var value = "";
+						if (kony.i18n.getCurrentLocale() == "ar_SA")
+							value = result["paymentMethodsList"][i]["paymentMethod_ar"];
+						else
+							value = result["paymentMethodsList"][i]["paymentMethod_en"];
+
+						comboboxData.push({"mykey":key,"myvalue":value})
+					
+					}
+					frmAttestGrad2.dropdownpaymentcardtype.masterDataMap=[comboboxData,"mykey","myvalue"];
+					dismissLoadingIndicator();
+					
+				
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+				
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function generalInfoForInsertApp(inputparam){
+	try{
+		if(selectedCategory == category_Graduate){
+			inputparam["serviceID"] = "Insert_App_Grad";
+			inputparam["requestID"] = "1";
+			inputparam["telPhoneCD"] = attesGradObj["telephoneAreaCode"];
+			inputparam["mobileCD"] = attesGradObj["mobileAreaCode"];
+			inputparam["universityID"] = attesGradObj["studentID"];
+			inputparam["studyLevelID"] = attesGradObj["studyLevel"];
+			inputparam["major"] = attesGradObj["major"];
+			inputparam["graduationDT"] = attesGradObj["graduateYear"];
+				
+			inputparam["totalNoOfDocs"] = attesGradObj["noOfDocuments"];
+		}
+		else if(selectedCategory == category_Enrolled){
+			inputparam["serviceID"] = "Insert_App";
+			inputparam["requestID"] = "2";
+			inputparam["telPhoneCD"] = attesGradObj["telephoneAreaCode"];
+			inputparam["mobileCD"] = attesGradObj["mobileAreaCode"];
+			inputparam["universityID"] = attesGradObj["studentID"];
+			inputparam["studyLevelID"] = attesGradObj["studyLevel"];
+			inputparam["major"] = attesGradObj["major"];
+			
+				
+			inputparam["totalNoOfDocs"] = attesGradObj["noOfDocuments"];
+		}
+		else{
+			inputparam["serviceID"] = "Insert_App";
+			inputparam["requestID"] = "3";
+			inputparam["telPhoneCD"] = attesGradObj["telephoneAreaCode"];
+			inputparam["mobileCD"] = attesGradObj["mobileAreaCode"];
+				
+			inputparam["universityID"] = "";
+			inputparam["studyLevelID"] = "";
+			inputparam["major"] = "";
+			
+			inputparam["totalNoOfDocs"] = attesGradObj["noOfDocuments"];
+		}
+			
+			
+		
+			
+		kony.print("input params are--------------",inputparam);
+		appmiddlewareinvokerasync(inputparam, insertAppCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+function invokeInsertApp(){
+	try{
+		showLoadingIndicator();
+		var inputparam = [];
+		
+		inputparam["user"] = "Webservice";
+		inputparam["password"] = "wEbsErViCe$35#";
+		
+		//general information 
+
+		inputparam["appName"] = attesGradObj["studentName"];
+		inputparam["gender"] = (attesGradObj["gender"] == true)?"1":"2";
+		inputparam["nationalityID"] = attesGradObj["nationality"];
+		inputparam["telPhone"] = attesGradObj["telephoneNo"];
+		inputparam["mobile"] = attesGradObj["mobileNo"];
+		inputparam["emirateID"] = attesGradObj["emiratesID"];
+		inputparam["poBox"] = attesGradObj["POBoxNo"];
+		inputparam["email"] = attesGradObj["email"];
+		
+		//common for all users
+		inputparam["instituteID"] = attesGradObj["instituteId"];
+		inputparam["noOfDocs"] = attesGradObj["noOfDocuments"];
+		inputparam["purposeID"] = (attesGradObj["purpose"] == true)?"0":"1";
+		
+		//hardcoded values for all users
+		inputparam["isNew"] = "true";
+		inputparam["appNo"] = "0";
+		inputparam["address"] = "TEST";
+		inputparam["scientificCert"] = "0";
+		inputparam["scoreSheet"] = "0";
+		inputparam["graduateCert"] = "0";
+		inputparam["toWhom"] = "0";
+		inputparam["attAmount"] = "0";
+		inputparam["statusID"] = "0";
+		inputparam["attestNO"] = "0";
+		inputparam["attesterID"] = "0";
+		inputparam["uUser"] = "ONLINE";
+		inputparam["cUser"] = "ONLINE";
+		inputparam["receivedBy"] = "ONLINE";
+		inputparam["certCopy"] = "0";
+		inputparam["attReceipt"] = "0";
+		inputparam["prevEmirateID"] = "1111";
+		inputparam["semisterID"] = "0";
+		inputparam["requestBy"] = "0";
+		inputparam["incompleteApp"] = "0";
+		
+		
+		generalInfoForInsertApp(inputparam);
+		
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function insertAppCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["result"] == "true" || result["result"] == true){
+					gblAppNoFromInsertApp = result["appno"];
+					if(selectedCategory == category_Graduate)
+						invokeInsertPreCertApp();
+					else{
+						if(isSaveAttach==true)
+							saveAttachmetAttestation();
+						else{
+							dismissLoadingIndicator();
+							frmApplicationSubmit.show();
+						}
+						
+						
+						//frmPayment.show();
+					}
+						
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+
+function invokeInsertPreCertApp(){
+	try{
+		var inputparam = {
+	        serviceID: "Insert_PreCert",
+	        isNew:"true",
+	        appNo:gblAppNoFromInsertApp,
+	        certNO:"2",
+	        certificate:"",
+	        instituteName:attesGradObj["prevInstituteName"],//"test",
+	        countryID:attesGradObj["nationality"],//"269",
+	        studyLevelID:attesGradObj["prevStudyLevel"],//"108",
+	        major:attesGradObj["major"],//"4",
+	        remarks:"",
+	        noOfDocs:attesGradObj["noOfDocuments"],//"0",
+	        originalSubmitted:"0",
+	        copySubmitted:"0",
+	        certScanned:"0",
+	        uUser:"ONLINE",
+	        cUser:"ONLINE",
+	        creditHRS:attesGradObj["transCreditHours"],
+	        emirateNationalID:attesGradObj["emiratesID"],
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        output:""
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, invokeInsertPreCertAppCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function invokeInsertPreCertAppCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["result"] == "true" || result["result"] == true){
+					dismissLoadingIndicator();
+					if(isSaveAttach==true)
+						saveAttachmetAttestation();
+					else{
+						dismissLoadingIndicator();
+						frmApplicationSubmit.show();
+					}
+					//frmPayment.show();
+				}
+				else{
+					dismissLoadingIndicator();
+					alert("service fail!");
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+				alert("service fail!");
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function createAttestGrad1Obj(){
+	attesGradObj["studentName"] = frmAttestGrad1.txtstudentname.text;
+	attesGradObj["gender"] = isMale;
+	attesGradObj["nationality"] = frmAttestGrad1.dropdownnationality.selectedKey;
+	attesGradObj["telephoneAreaCode"] = frmAttestGrad1.txtTelephoneAreaCode.text;
+	attesGradObj["telephoneNo"] = frmAttestGrad1.txtTelephoneNumber.text;
+	attesGradObj["mobileAreaCode"] = frmAttestGrad1.dropdownmobileareacode.selectedKey;
+	attesGradObj["mobileNo"] = frmAttestGrad1.txtmobilenumber.text;
+	attesGradObj["emiratesID"] = frmAttestGrad1.txtemiratesid1.text.toString()+"-"+frmAttestGrad1.txtemiratesid2.text.toString()+"-"+frmAttestGrad1.txtemiratesid3.text.toString()+"-"+frmAttestGrad1.txtemiratesid4.text.toString();
+	attesGradObj["POBoxNo"] = frmAttestGrad1.txtpobox.text;
+	attesGradObj["emirateNo"] = frmAttestGrad1.dropdownemirate.selectedKey;
+	attesGradObj["email"] = frmAttestGrad1.txtemail.text;
+}
+
+function createAttestGrad2Obj(){
+	attesGradObj["instituteId"] = frmAttestGrad2.dropdowninstitue.selectedKey;
+	attesGradObj["studyLevel"] = frmAttestGrad2.dropdownstudylevel.selectedKey;
+	attesGradObj["major"] = frmAttestGrad2.dropdownmajor.selectedKey;
+	attesGradObj["graduateYear"] = frmAttestGrad2.txtgraduatedyear.text;
+	attesGradObj["noOfDocuments"] = frmAttestGrad2.txtnoofdocuments.text;
+	attesGradObj["studentID"] = frmAttestGrad2.txtstudentid.text;
+	attesGradObj["purpose"] = isPurpose;
+	attesGradObj["paymentMethod"] = frmAttestGrad2.dropdownpaymentmethod.selectedKey;
+	attesGradObj["paymentMethodType"] = frmAttestGrad2.dropdownpaymentcardtype.selectedKey;
+	kony.print("result data is Grad2------------",attesGradObj);
+}
+
+function createAttestGrad3Obj(){
+	attesGradObj["prevStudyLevel"]=frmAttestGrad3.dropdownstudylevel.selectedKey;
+	attesGradObj["prevInstituteName"] = frmAttestGrad3.txtinstitutename.text;
+	attesGradObj["prevMajor"] = frmAttestGrad3.txtmajor.text;
+	attesGradObj["isCertifiedOrNot"]=isAttested;
+	attesGradObj["transInstituteName"] = frmAttestGrad3.txtinstitutename2.text;
+	attesGradObj["trnasCountry"] = frmAttestGrad3.dropdownnationality.text;
+	attesGradObj["transCreditHours"] = frmAttestGrad3.txtcredithours.text;
+	attesGradObj["captureImg"] = "";
+	
+}
+function displayError(err){
+	dismissLoadingIndicator();
+	kony.print("Error message is :"+err.message);
+}
+
+function showLoadingIndicator(){
+	kony.application.showLoadingScreen("loadSkin", "Loading..", constants.LOADING_SCREEN_POSITION_ONLY_CENTER, true, true, null)
+}
+function dismissLoadingIndicator(){
+	kony.application.dismissLoadingScreen();
+}
+
+
+
+function setBrwValue()
+{
+	//var myurl = "<html><head><title>3D Secure Page</title></head><body onload=\"document.getElementById('3dform').submit();\"><form method=\"GET\" action=\"https://services.mohesr.gov.ae/SharePointAttestation/Payment.aspx\" id=\"3dform\"><input type=\"hidden\" name=\"PaymentType\" value=\"1-1\" /><input type=\"text\" name=\"AppNo\" value=\"55008\" /><input type=\"text\" name=\"Qty\" value=\"1\" /><input type=\"text\" name=\"ServiceCode\" value=\"145602-0001\"/><br/><div style=\"text-align: center\">\n<h1>Processing your 3-D Secure Transaction </h1>\n<p>Please click continue to continue the processing of your 3-D Secure transaction.</p>\n</div></noscript></form></body></html>"; 
+	//var myurl = "<html><head><title>3D Secure Page</title></head><body onload=\"document.getElementById('3dform').submit();\"><form method=\"GET\" action=\"https://services.mohesr.gov.ae/SharePointAttestation/Payment.aspx\" id=\"3dform\"><input type=\"hidden\" name=\"PaymentType\" value=\"1-1\" /><input type=\"text\" name=\"AppNo\" value="+gblAppNoFromInsertApp+" /><input type=\"text\" name=\"Qty\" value=\"1\" /><input type=\"text\" name=\"ServiceCode\" value=\"145602-0001\"/><br/><div style=\"text-align: center\">\n<h1>Processing your 3-D Secure Transaction </h1>\n<p>Please click continue to continue the processing of your 3-D Secure transaction.</p>\n</div></noscript></form></body></html>";
+	var myurl = "<html><head><title>3D Secure Page</title></head><body onload=\"document.getElementById('3dform').submit();\"><form method=\"GET\" action=\"https://services.mohesr.gov.ae/SharePointAttestation/Payment.aspx\" id=\"3dform\"><input type=\"hidden\" name=\"PaymentType\" value=\"1-1\" /><input type=\"hidden\" name=\"AppNo\" value="+gblAppNoFromInsertApp+" /><input type=\"hidden\" name=\"Qty\" value=\"1\" /><input type=\"hidden\" name=\"ServiceCode\" value=\"145602-0001\"/><br/><div style=\"text-align: center\">\n<h1>Processing Transaction </h1>\n<p></p>\n</div></noscript></form></body></html>";
+	frmPayment.brw.htmlString = myurl;
+	
+	
+	frmPayment.brw.handleRequest = handleBrowserCallback;
+
+}
+
+
+function handleBrowserCallback(browserWidget,params)
+{
+	kony.print("check1: handleRequest event triggered");
+	kony.print("check1: Original URL: " + params ["originalURL"]);
+	kony.print("check1: Request Method: " + params ["requestMethod"]);
+	kony.print("check1: Header: " + JSON.stringify(params["header"]));
+	kony.print("check1: queryParams: " + JSON.stringify(params["queryParams"]));
+	kony.print("check1: complete params obj: " + JSON.stringify(params));
+	
+	var queryParams = params["queryParams"];
+	
+		//if(queryParams["statusCode"]=="Success"){
+		//	alert("Payment Done")
+		//	frmHome.show(); Go back to the Phone UI.
+		//}
+									
+
+	//If false is returned, platform will load the originalurl in the browser widget.
+	if ("https://services.mohesr.gov.ae/SharePointAttestation/Default.aspx" == params ["originalURL"])
+	{
+		//kony.print("check1: completed payment process going to native form: " + frmHome.title);
+		frmPayment.destroy();
+		frmMainMenu.show();
+		return true;
+	}
+	else {
+		return false;	
+	} 
+}
+function appExit(){
+	kony.application.exit();
+}
+
+
+function getUserDataToAuto(){
+	try{
+		var inputparam = {
+	        serviceID: "Select_User",
+	        userID:gblLoggedUserID,
+	        user:"Webservice",
+	        password:"wEbsErViCe$35#",
+	        output:""
+	       
+	    };
+	    kony.print("inputparam are ***********",inputparam);
+		appmiddlewareinvokerasync(inputparam, getUserDataToAutoCallback);
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function getUserDataToAutoCallback(status, result) {
+	try{
+		if (status == 400) {
+			if ((kony.os.toNumber(result.opstatus) == 0)) {
+				kony.print("result data is------------",result);
+				if(result["userID"] == "" || result["result"] == null || result["result"] == undefined){
+					frmAttestGrad1.txtstudentname.text = result["appName"];
+					frmAttestGrad1.dropdownnationality.selectedKey = result["nationalityID"];
+					frmAttestGrad1.txtemail.text = result["email"];
+					frmAttestGrad1.dropdownmobileareacode.selectedKey = result["mobileCountryCode"]; 
+					frmAttestGrad1.txtmobilenumber.text = result["mobile"]; 
+					//frmAttestGrad1.txtpobox.text = result["passportNO"];
+					
+					
+				}
+				else{
+					dismissLoadingIndicator();
+				}
+			}
+			else{
+				dismissLoadingIndicator();
+			}
+		}
+	}
+	catch(err){
+		displayError(err);
+	}
+}
+
+function onClickNoPopUp()
+{
+	frmAttachmentConfirmation.dismiss();
+}
+
+function onClickYesPopUp()
+{
+	isSaveAttach=false;
+	CurrentForm=kony.application.getCurrentForm().id;
+	if(CurrentForm=="frmNewReg")
+	{
+		frmAttachmentConfirmation.dismiss();
+		insertNewUser();
+	}
+	else
+	{
+		frmAttachmentConfirmation.dismiss();
+		invokeInsertApp();
+	}
+	
+	
+}
+
+function OnClickAttestationCheckAttachment()
+{
+	
+	if(isCaptureMaxlengthExceeds==false)
+		invokeInsertApp();
+	else
+	{
+		frmAttachmentConfirmation.show();
+	}
+}
+
+function populateApplicaitonNo()
+{
+	frmApplicationSubmit.lblApplicationNumber.text=gblAppNoFromInsertApp;
+}

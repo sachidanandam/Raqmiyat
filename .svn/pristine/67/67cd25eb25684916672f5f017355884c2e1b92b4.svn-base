@@ -1,0 +1,1005 @@
+<application desc="" id="MOHESR" name="" smscode="">
+   <app-config>
+      <config-param name="APP_SMS_HEADER" value="null"/>
+   </app-config>
+   <services>
+      <service cachable="false" cacheduration="" id="Insert_App" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Insert_App"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Insert_App&gt;&lt;!--Optional:--&gt;&lt;moh:oAPP_TABLE&gt;&lt;moh:isNew&gt;$isNew&lt;/moh:isNew&gt;&lt;moh:APP_NO&gt;$appNo&lt;/moh:APP_NO&gt;&lt;moh:REQUEST_ID&gt;$requestID&lt;/moh:REQUEST_ID&gt;&lt;!--Optional:--&gt;&lt;moh:APP_NAME&gt;$appName&lt;/moh:APP_NAME&gt;&lt;moh:GENDER&gt;$gender&lt;/moh:GENDER&gt;&lt;!--Optional:--&gt;&lt;moh:NATIONALITY_ID&gt;$nationalityID&lt;/moh:NATIONALITY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:ADDRESS&gt;$address&lt;/moh:ADDRESS&gt;&lt;moh:PO_BOX&gt;$poBox&lt;/moh:PO_BOX&gt;&lt;!--Optional:--&gt;&lt;moh:TEL_PHONE_CD&gt;$telPhoneCD&lt;/moh:TEL_PHONE_CD&gt;&lt;!--Optional:--&gt;&lt;moh:TEL_PHONE&gt;$telPhone&lt;/moh:TEL_PHONE&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE_CD&gt;$mobileCD&lt;/moh:MOBILE_CD&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE&gt;$mobile&lt;/moh:MOBILE&gt;&lt;!--Optional:--&gt;&lt;moh:EMAIL&gt;$email&lt;/moh:EMAIL&gt;&lt;!--Optional:--&gt;&lt;moh:EmirateID&gt;$emirateID&lt;/moh:EmirateID&gt;&lt;moh:SCIENTIFICCERTIFICATE&gt;$scientificCert&lt;/moh:SCIENTIFICCERTIFICATE&gt;&lt;moh:SCORESHEET&gt;$scoreSheet&lt;/moh:SCORESHEET&gt;&lt;moh:GRADUATEDCERTIFICATE&gt;$graduateCert&lt;/moh:GRADUATEDCERTIFICATE&gt;&lt;moh:TOWHOM&gt;$toWhom&lt;/moh:TOWHOM&gt;&lt;!--Optional:--&gt;&lt;moh:CERTIFICATE/&gt;&lt;moh:INSTITUTE_ID&gt;$instituteID&lt;/moh:INSTITUTE_ID&gt;&lt;!--Optional:--&gt;&lt;moh:UNIVERSITY_ID&gt;$universityID&lt;/moh:UNIVERSITY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:STUDY_LEVEL_ID&gt;$studyLevelID&lt;/moh:STUDY_LEVEL_ID&gt;&lt;!--Optional:--&gt;&lt;moh:MAJOR&gt;$major&lt;/moh:MAJOR&gt;&lt;!--Optional:--&gt;&lt;moh:CONCENTRAT/&gt;&lt;moh:ATT_AMOUNT&gt;$attAmount&lt;/moh:ATT_AMOUNT&gt;&lt;moh:NOOF_DOCUMENTS&gt;$noOfDocs&lt;/moh:NOOF_DOCUMENTS&gt;&lt;moh:TOTAL_NOOF_DOCS&gt;$totalNoOfDocs&lt;/moh:TOTAL_NOOF_DOCS&gt;&lt;!--Optional:--&gt;&lt;moh:EAED_CARD_NO/&gt;&lt;!--Optional:--&gt;&lt;moh:PREVIOUS_CERT/&gt;&lt;!--Optional:--&gt;&lt;moh:FILE_NO/&gt;&lt;moh:PURPOSE_ID&gt;$purposeID&lt;/moh:PURPOSE_ID&gt;&lt;moh:STATUS_ID&gt;$statusID&lt;/moh:STATUS_ID&gt;&lt;moh:ATTEST_NO&gt;$attestNO&lt;/moh:ATTEST_NO&gt;&lt;moh:ATTESTER_ID&gt;$attesterID&lt;/moh:ATTESTER_ID&gt;&lt;!--Optional:--&gt;&lt;moh:PDF_FILE_REF/&gt;&lt;!--Optional:--&gt;&lt;moh:UUSER&gt;$uUser&lt;/moh:UUSER&gt;&lt;!--Optional:--&gt;&lt;moh:CUSER&gt;$cUser&lt;/moh:CUSER&gt;&lt;!--Optional:--&gt;&lt;moh:ATTE_NOTE/&gt;&lt;!--Optional:--&gt;&lt;moh:RECEIVEDBY&gt;$receivedBy&lt;/moh:RECEIVEDBY&gt;&lt;moh:CERTCOPY&gt;$certCopy&lt;/moh:CERTCOPY&gt;&lt;!--Optional:--&gt;&lt;moh:LETTER_REFNO/&gt;&lt;moh:ATTE_RECEIPT&gt;$attReceipt&lt;/moh:ATTE_RECEIPT&gt;&lt;moh:EMIRATE_ID&gt;$prevEmirateID&lt;/moh:EMIRATE_ID&gt;&lt;moh:SEMISTER_ID&gt;$semisterID&lt;/moh:SEMISTER_ID&gt;&lt;moh:REQUESTBY&gt;$requestBy&lt;/moh:REQUESTBY&gt;&lt;moh:INCOMPLETEAPP&gt;$incompleteApp&lt;/moh:INCOMPLETEAPP&gt;&lt;!--Optional:--&gt;&lt;moh:MAJOR_DESC/&gt;&lt;!--Optional:--&gt;&lt;moh:ImpostNo/&gt;&lt;!--Optional:--&gt;&lt;moh:ImpostNoIn/&gt;&lt;/moh:oAPP_TABLE&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Insert_App&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="isNew" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appNo" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="requestID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="gender" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="nationalityID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="address" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="poBox" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="telPhoneCD" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="telPhone" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobileCD" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobile" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="email" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emirateID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="scientificCert" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="scoreSheet" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="graduateCert" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="toWhom" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="instituteID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="universityID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="studyLevelID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="major" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attAmount" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="noOfDocs" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="totalNoOfDocs" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="purposeID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="statusID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attestNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attesterID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="uUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="receivedBy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="certCopy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attReceipt" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="prevEmirateID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="semisterID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="requestBy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="incompleteApp" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Insert_AppResponse/Insert_AppResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="appno" sms-name="" src="//Insert_AppResponse/AppNo" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Insert_AppResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Insert_App_Grad" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Insert_App"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="true"/>
+            <config-param name="ignorehttpproxy" value="true"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Insert_App&gt;&lt;!--Optional:--&gt;&lt;moh:oAPP_TABLE&gt;&lt;moh:isNew&gt;$isNew&lt;/moh:isNew&gt;&lt;moh:APP_NO&gt;$appNo&lt;/moh:APP_NO&gt;&lt;moh:REQUEST_ID&gt;$requestID&lt;/moh:REQUEST_ID&gt;&lt;!--Optional:--&gt;&lt;moh:APP_NAME&gt;$appName&lt;/moh:APP_NAME&gt;&lt;moh:GENDER&gt;$gender&lt;/moh:GENDER&gt;&lt;!--Optional:--&gt;&lt;moh:NATIONALITY_ID&gt;$nationalityID&lt;/moh:NATIONALITY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:ADDRESS&gt;$address&lt;/moh:ADDRESS&gt;&lt;moh:PO_BOX&gt;$poBox&lt;/moh:PO_BOX&gt;&lt;!--Optional:--&gt;&lt;moh:TEL_PHONE_CD&gt;$telPhoneCD&lt;/moh:TEL_PHONE_CD&gt;&lt;!--Optional:--&gt;&lt;moh:TEL_PHONE&gt;$telPhone&lt;/moh:TEL_PHONE&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE_CD&gt;$mobileCD&lt;/moh:MOBILE_CD&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE&gt;$mobile&lt;/moh:MOBILE&gt;&lt;!--Optional:--&gt;&lt;moh:EMAIL&gt;$email&lt;/moh:EMAIL&gt;&lt;!--Optional:--&gt;&lt;moh:EmirateID&gt;$emirateID&lt;/moh:EmirateID&gt;&lt;moh:SCIENTIFICCERTIFICATE&gt;$scientificCert&lt;/moh:SCIENTIFICCERTIFICATE&gt;&lt;moh:SCORESHEET&gt;$scoreSheet&lt;/moh:SCORESHEET&gt;&lt;moh:GRADUATEDCERTIFICATE&gt;$graduateCert&lt;/moh:GRADUATEDCERTIFICATE&gt;&lt;moh:TOWHOM&gt;$toWhom&lt;/moh:TOWHOM&gt;&lt;!--Optional:--&gt;&lt;moh:CERTIFICATE/&gt;&lt;moh:INSTITUTE_ID&gt;$instituteID&lt;/moh:INSTITUTE_ID&gt;&lt;!--Optional:--&gt;&lt;moh:UNIVERSITY_ID&gt;$universityID&lt;/moh:UNIVERSITY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:STUDY_LEVEL_ID&gt;$studyLevelID&lt;/moh:STUDY_LEVEL_ID&gt;&lt;!--Optional:--&gt;&lt;moh:MAJOR&gt;$major&lt;/moh:MAJOR&gt;&lt;!--Optional:--&gt;&lt;moh:CONCENTRAT/&gt;&lt;moh:GRADUATION_DT&gt;$graduationDT&lt;/moh:GRADUATION_DT&gt;&lt;moh:ATT_AMOUNT&gt;$attAmount&lt;/moh:ATT_AMOUNT&gt;&lt;moh:NOOF_DOCUMENTS&gt;$noOfDocs&lt;/moh:NOOF_DOCUMENTS&gt;&lt;moh:TOTAL_NOOF_DOCS&gt;$totalNoOfDocs&lt;/moh:TOTAL_NOOF_DOCS&gt;&lt;!--Optional:--&gt;&lt;moh:EAED_CARD_NO/&gt;&lt;!--Optional:--&gt;&lt;moh:PREVIOUS_CERT/&gt;&lt;!--Optional:--&gt;&lt;moh:FILE_NO/&gt;&lt;moh:PURPOSE_ID&gt;$purposeID&lt;/moh:PURPOSE_ID&gt;&lt;moh:STATUS_ID&gt;$statusID&lt;/moh:STATUS_ID&gt;&lt;moh:ATTEST_NO&gt;$attestNO&lt;/moh:ATTEST_NO&gt;&lt;moh:ATTESTER_ID&gt;$attesterID&lt;/moh:ATTESTER_ID&gt;&lt;!--Optional:--&gt;&lt;moh:PDF_FILE_REF/&gt;&lt;!--Optional:--&gt;&lt;moh:UUSER&gt;$uUser&lt;/moh:UUSER&gt;&lt;!--Optional:--&gt;&lt;moh:CUSER&gt;$cUser&lt;/moh:CUSER&gt;&lt;!--Optional:--&gt;&lt;moh:ATTE_NOTE/&gt;&lt;!--Optional:--&gt;&lt;moh:RECEIVEDBY&gt;$receivedBy&lt;/moh:RECEIVEDBY&gt;&lt;moh:CERTCOPY&gt;$certCopy&lt;/moh:CERTCOPY&gt;&lt;!--Optional:--&gt;&lt;moh:LETTER_REFNO/&gt;&lt;moh:ATTE_RECEIPT&gt;$attReceipt&lt;/moh:ATTE_RECEIPT&gt;&lt;moh:EMIRATE_ID&gt;$prevEmirateID&lt;/moh:EMIRATE_ID&gt;&lt;moh:SEMISTER_ID&gt;$semisterID&lt;/moh:SEMISTER_ID&gt;&lt;moh:REQUESTBY&gt;$requestBy&lt;/moh:REQUESTBY&gt;&lt;moh:INCOMPLETEAPP&gt;$incompleteApp&lt;/moh:INCOMPLETEAPP&gt;&lt;!--Optional:--&gt;&lt;moh:MAJOR_DESC/&gt;&lt;!--Optional:--&gt;&lt;moh:ImpostNo/&gt;&lt;!--Optional:--&gt;&lt;moh:ImpostNoIn/&gt;&lt;/moh:oAPP_TABLE&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Insert_App&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="isNew" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appNo" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="requestID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="gender" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="nationalityID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="address" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="poBox" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="telPhoneCD" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="telPhone" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobileCD" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobile" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="email" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emirateID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="scientificCert" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="scoreSheet" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="graduateCert" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="toWhom" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="instituteID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="universityID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="studyLevelID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="major" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="graduationDT" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="attAmount" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="noOfDocs" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="totalNoOfDocs" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="purposeID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="statusID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attestNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attesterID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="uUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="receivedBy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="certCopy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="attReceipt" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="prevEmirateID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="semisterID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="requestBy" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="incompleteApp" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Insert_AppResponse/Insert_AppResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="appno" sms-name="" src="//Insert_AppResponse/AppNo" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Insert_AppResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Insert_NewUser" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Insert_NewUser"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Insert_NewUser&gt;&lt;!--Optional:--&gt;&lt;moh:oRegistration&gt;&lt;moh:isNew&gt;$isNew&lt;/moh:isNew&gt;&lt;moh:USER_ID&gt;$userID&lt;/moh:USER_ID&gt;&lt;!--Optional:--&gt;&lt;moh:APP_NAME&gt;$appName&lt;/moh:APP_NAME&gt;&lt;!--Optional:--&gt;&lt;moh:NATIONALITY_ID&gt;$nationalityId&lt;/moh:NATIONALITY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:USER_NAME&gt;$userName&lt;/moh:USER_NAME&gt;&lt;!--Optional:--&gt;&lt;moh:USER_PASSWORD&gt;$userPassword&lt;/moh:USER_PASSWORD&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE&gt;$mobile&lt;/moh:MOBILE&gt;&lt;!--Optional:--&gt;&lt;moh:EMAIL&gt;$email&lt;/moh:EMAIL&gt;&lt;!--Optional:--&gt;&lt;moh:EMIRATES_ID&gt;$emiratesId&lt;/moh:EMIRATES_ID&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE_COUNTRY_CODE&gt;$mobileCountryCode&lt;/moh:MOBILE_COUNTRY_CODE&gt;&lt;!--Optional:--&gt;&lt;moh:MOBILE_CODE&gt;$mobileCode&lt;/moh:MOBILE_CODE&gt;&lt;!--Optional:--&gt;&lt;moh:PASSPORT_NO&gt;$passportNo&lt;/moh:PASSPORT_NO&gt;&lt;/moh:oRegistration&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;moh:UserID&gt;$userIDRes&lt;/moh:UserID&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Insert_NewUser&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="isNew" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="nationalityId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userPassword" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobile" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="email" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emiratesId" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobileCountryCode" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobileCode" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="passportNo" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userIDRes" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="resultNew" sms-name="" src="//Insert_NewUserResponse/Insert_NewUserResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="userIDNew" sms-name="" src="//Insert_NewUserResponse/UserID" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="outputNew" sms-name="" src="//Insert_NewUserResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Insert_Payment" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Insert_Payment"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Insert_Payment&gt;&lt;moh:App_No&gt;$appNO&lt;/moh:App_No&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:OrderID&gt;$orderID&lt;/moh:OrderID&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Insert_Payment&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="appNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="orderID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Insert_PaymentResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Insert_PaymentResponse/Insert_PaymentResult" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Insert_PreCert" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Insert_PreCert"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Insert_PreCert&gt;&lt;!--Optional:--&gt;&lt;moh:oAPP_TABLE_PRECERT&gt;&lt;moh:isNew&gt;$isNew&lt;/moh:isNew&gt;&lt;moh:APP_NO&gt;$appNo&lt;/moh:APP_NO&gt;&lt;moh:CERT_NO&gt;$certNO&lt;/moh:CERT_NO&gt;&lt;!--Optional:--&gt;&lt;moh:CERTIFICATE&gt;$certificate&lt;/moh:CERTIFICATE&gt;&lt;!--Optional:--&gt;&lt;moh:INSTITUTE_NAME&gt;$instituteName&lt;/moh:INSTITUTE_NAME&gt;&lt;moh:COUNTRY_ID&gt;$countryID&lt;/moh:COUNTRY_ID&gt;&lt;!--Optional:--&gt;&lt;moh:STUDY_LEVEL_ID&gt;$studyLevelID&lt;/moh:STUDY_LEVEL_ID&gt;&lt;!--Optional:--&gt;&lt;moh:MAJOR&gt;$major&lt;/moh:MAJOR&gt;&lt;!--Optional:--&gt;&lt;moh:REMARKS&gt;$remarks&lt;/moh:REMARKS&gt;&lt;moh:NOOF_DOCUMENTS&gt;$noOfDocs&lt;/moh:NOOF_DOCUMENTS&gt;&lt;moh:ORIGINAL_SUBMITTED&gt;$originalSubmitted&lt;/moh:ORIGINAL_SUBMITTED&gt;&lt;moh:COPY_SUBMITTED&gt;$copySubmitted&lt;/moh:COPY_SUBMITTED&gt;&lt;moh:CERT_SCANNED&gt;$certScanned&lt;/moh:CERT_SCANNED&gt;&lt;!--Optional:--&gt;&lt;moh:UUSER&gt;$uUser&lt;/moh:UUSER&gt;&lt;!--Optional:--&gt;&lt;moh:CUSER&gt;$cUser&lt;/moh:CUSER&gt;&lt;moh:CREDIT_HRS&gt;$creditHRS&lt;/moh:CREDIT_HRS&gt;&lt;!--Optional:--&gt;&lt;moh:Emirate_National_Id&gt;$emirateNationalID&lt;/moh:Emirate_National_Id&gt;&lt;/moh:oAPP_TABLE_PRECERT&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Insert_PreCert&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="isNew" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="appNo" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="certNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="certificate" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="instituteName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="countryID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="studyLevelID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="major" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="remarks" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="noOfDocs" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="originalSubmitted" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="copySubmitted" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="certScanned" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="uUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="cUser" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="creditHRS" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emirateNationalID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Insert_PreCertResponse/Insert_PreCertResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Insert_PreCertResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="SaveAttachment" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/SaveAttachment"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:SaveAttachment&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$userAtt&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$passwordAtt&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:App_No&gt;$appNOAtt&lt;/moh:App_No&gt;&lt;!--Optional:--&gt;&lt;moh:Content&gt;$contentAtt&lt;/moh:Content&gt;&lt;!--Optional:--&gt;&lt;moh:FileName&gt;$fileNameAtt&lt;/moh:FileName&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$outputAtt&lt;/moh:outPut&gt;&lt;/moh:SaveAttachment&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="userAtt" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="passwordAtt" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="appNOAtt" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="contentAtt" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="fileNameAtt" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="outputAtt" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="resultAtt" sms-name="" src="//SaveAttachmentResponse/SaveAttachmentResult" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="outputAtt" sms-name="" src="//SaveAttachmentResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="SaveUserAttachment" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/SaveUserAttachment"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:SaveUserAttachment&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:UserID&gt;$userID&lt;/moh:UserID&gt;&lt;!--Optional:--&gt;&lt;moh:Content&gt;$content&lt;/moh:Content&gt;&lt;!--Optional:--&gt;&lt;moh:FileName&gt;$fileName&lt;/moh:FileName&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:SaveUserAttachment&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="userID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="content" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="fileName" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//SaveUserAttachmentResponse/SaveUserAttachmentResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//SaveUserAttachmentResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_CheckUser" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_CheckUser"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_CheckUser&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:UserName&gt;$userName&lt;/moh:UserName&gt;&lt;!--Optional:--&gt;&lt;moh:UserPassword&gt;$userPassword&lt;/moh:UserPassword&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;?&lt;/moh:outPut&gt;&lt;/moh:Select_CheckUser&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userName" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="userPassword" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Select_CheckUserResponse/Select_CheckUserResult" srcformatvalue="" target="response"/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_CheckUserResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_Country" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_Country"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_Country&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$userCountry&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$passwordCountry&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Select_Country&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="userCountry" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="passwordCountry" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="countriesList" src="//Select_CountryResult">
+               <param datatype="string" format="None" formatvalue="" name="countryID" sms-name="" src="COUNTRY/COUNTRY_ID" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="countyName_en" sms-name="" src="COUNTRY/COUNTRY_E" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="countyName_ar" sms-name="" src="COUNTRY/COUNTRY_A" srcformatvalue="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="outputCountry" sms-name="" src="//Select_CountryResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_Emirates" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_Emirates"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_Emirates&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$userEmirates&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$passwordEmirates&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Select_Emirates&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="userEmirates" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="passwordEmirates" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="emiratesList" src="//Select_EmiratesResult">
+               <param datatype="string" format="None" formatvalue="" name="emirateID" sms-name="" src="EMIRATES/EMIRATE_ID" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="emirateName_en" sms-name="" src="EMIRATES/EMIRATE_E" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="emirateName_ar " sms-name="" src="EMIRATES/EMIRATE_A" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="emiratesOutput" sms-name="" src="//Select_EmiratesResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_Institutes" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_Institutes"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_Institutes&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Select_Institutes&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="instList" src="//Select_InstitutesResult">
+               <param datatype="string" format="None" formatvalue="" name="instNo" sms-name="" src="ATTE_INSTITUTES/INST_NO" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="isOldInst" sms-name="" src="ATTE_INSTITUTES/IS_OLD_INST" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="instName_en" sms-name="" src="ATTE_INSTITUTES/INST_NAME_E" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="instName_ar" sms-name="" src="ATTE_INSTITUTES/INST_NAME_A" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="cdate" sms-name="" src="ATTE_INSTITUTES/CDATE" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_InstitutesResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_Major" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_Major"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_Major&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;moh:instno&gt;$instNo&lt;/moh:instno&gt;&lt;moh:studylevel&gt;$studyLevel&lt;/moh:studylevel&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Select_Major&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="instNo" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="studyLevel" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="pgList" src="//Select_MajorResult">
+               <param datatype="string" format="None" formatvalue="" name="pgNo" sms-name="" src="ATTE_MAJOR/PG_NO" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="pgName_en" sms-name="" src="ATTE_MAJOR/PG_NAME_E" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="pgName_ar" sms-name="" src="ATTE_MAJOR/PG_NAME_A" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_MajorResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_MobileCode" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_MobileCode"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_MobileCode&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;&lt;/moh:outPut&gt;&lt;/moh:Select_MobileCode&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="mobCodes" src="//Select_MobileCodeResult">
+               <param datatype="string" format="None" formatvalue="" name="mobileCode" sms-name="" src="ClsMobileCode/MobileCode" srcformatvalue="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_MobileCodeResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_PaymentMethod" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_PaymentMethod"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_PaymentMethod&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;moh:PaymentMethodTypeID&gt;$paymentMethodTypeID&lt;/moh:PaymentMethodTypeID&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Select_PaymentMethod&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="paymentMethodTypeID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="paymentMethodsList" src="//Select_PaymentMethodResult">
+               <param datatype="string" format="None" formatvalue="" name="paymentMethodCode" sms-name="" src="PAYMENTMETHOD/CODE" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="paymentMethod_en" sms-name="" src="PAYMENTMETHOD/PAYMENTMETHOD" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="paymentMethod_ar" sms-name="" src="PAYMENTMETHOD/PAYMENTMETHODAR" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="edirham" sms-name="" src="PAYMENTMETHOD/EDIRHAM" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_PaymentMethodResponse/outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_PaymentMethodType" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_PaymentMethodType"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_PaymentMethodType&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;&lt;/moh:outPut&gt;&lt;/moh:Select_PaymentMethodType&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="paymentsList" src="//Select_PaymentMethodTypeResult">
+               <param datatype="string" format="None" formatvalue="" name="paymentMethodTypelID" sms-name="" src="PAYMENTMETHODTYPE/PAYMENTMETHODTYPE_ID" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="paymentMethodType_en" sms-name="" src="PAYMENTMETHODTYPE/PAYMENTMETHODTYPE_E" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="paymentMethodType_ar" sms-name="" src="PAYMENTMETHODTYPE/PAYMENTMETHODTYPE_A" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_PaymentMethodTypeResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_StudyLevel" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_StudyLevel"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_StudyLevel&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;moh:instno&gt;$instNo&lt;/moh:instno&gt;&lt;!--Optional:--&gt;&lt;moh:outPut/&gt;&lt;/moh:Select_StudyLevel&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="instNo" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="studyLevelList" src="//Select_StudyLevelResult">
+               <param datatype="string" format="None" formatvalue="" name="studyLevelID" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_ID" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="studyLevel_en" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_E" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="studyLevel_ar" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_A" srcformatvalue="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_StudyLevelResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_User" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_User"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_User&gt;&lt;moh:UserID&gt;$userID&lt;/moh:UserID&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Select_User&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="userID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="userID" sms-name="" src="//Table/USER_ID" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="userName" sms-name="" src="//Table/USER_NAME" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="userPassword" sms-name="" src="//Table/USER_PASSWORD" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="email" sms-name="" src="//Table/EMAIL" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="mobileCountryCode " sms-name="" src="//Table/MOBILE_COUNTRY_CODE" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="mobileCode" sms-name="" src="//Table/MOBILE_CODE" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="mobile" sms-name="" src="//Table/MOBILE" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="nationalityID" sms-name="" src="//Table/NATIONALITY_ID" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="passportNO" sms-name="" src="//Table/PASSPORT_NO" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="appName" sms-name="" src="//Table/APP_NAME" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_ValidUser" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_ValidUser"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_ValidUser&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:UserName&gt;$userName&lt;/moh:UserName&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;&lt;/moh:outPut&gt;&lt;/moh:Select_ValidUser&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="userName" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="string" format="None" formatvalue="" name="result" sms-name="" src="//Select_ValidUserResponse/Select_ValidUserResult" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//Select_ValidUserResponse/outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="SendEmail" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/SendEmail"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:SendEmail&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:EmailTo&gt;$emailTO&lt;/moh:EmailTo&gt;&lt;!--Optional:--&gt;&lt;moh:EmailSubject&gt;$emailSubject&lt;/moh:EmailSubject&gt;&lt;!--Optional:--&gt;&lt;moh:EmailMessage&gt;$emailMsg&lt;/moh:EmailMessage&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:SendEmail&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emailTO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emailSubject" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="emailMsg" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="SendSMS" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/SendSMS"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:SendSMS&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:MobileNo&gt;$mobileNO&lt;/moh:MobileNo&gt;&lt;!--Optional:--&gt;&lt;moh:SMSMessage&gt;$SMSMsg&lt;/moh:SMSMessage&gt;&lt;moh:DataCoding&gt;$dateCoding&lt;/moh:DataCoding&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:SendSMS&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="mobileNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="SMSMsg" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="dateCoding" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Update_Payment" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Update_Payment"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Update_Payment&gt;&lt;moh:App_No&gt;$appNO&lt;/moh:App_No&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:OrderID&gt;$orderID&lt;/moh:OrderID&gt;&lt;!--Optional:--&gt;&lt;moh:BankResponce&gt;$bankResp&lt;/moh:BankResponce&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Update_Payment&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="appNO" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="orderID" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="bankResp" sms-name="" src="request" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="request" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_PrevStudyLevel" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_PrevStudyLevel"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="true"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_PrevStudyLevel&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Select_PrevStudyLevel&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="studyLevelList" src="//Select_PrevStudyLevelResult">
+               <param datatype="string" format="None" formatvalue="" name="studyLevelID" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_ID" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="studyLevel_en" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_E" srcformatvalue="" target=""/>
+               <param datatype="string" format="None" formatvalue="" name="studyLevel_ar" sms-name="" src="STUDY_LEVEL/STUDY_LEVEL_A" srcformatvalue="" target=""/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//outPut" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+      <service cachable="false" cacheduration="" id="Select_SubMajor" passwordencrypted="true" smscode="" smsenabled="false" type="soapserviceConnector">
+         <service-config>
+            <config-param name="endpointUrl" value="https://services.mohesr.gov.ae/MobileDev/AttService.asmx"/>
+            <config-param name="soapAction" value="http://www.mohesr.gov.ae/Select_SubMajor"/>
+            <config-param name="userid" value=""/>
+            <config-param name="soap-version" value="1.1"/>
+            <config-param name="postprocessorname" value=""/>
+            <config-param name="preprocessorname" value=""/>
+            <config-param name="urlprovider" value=""/>
+            <config-param name="dataprovider" value=""/>
+            <config-param name="sockettimeout" value=""/>
+            <config-param name="proxyname" value=""/>
+            <config-param name="proxyport" value=""/>
+            <config-param name="proxyusername" value=""/>
+            <config-param name="isembedxmlpresent" value="false"/>
+            <config-param name="ignorehttpproxy" value="false"/>
+            <config-param name="responseEncoding" value="UTF-8"/>
+            <config-param name="server.auth.mode" value="basic"/>
+            <config-param name="server.auth.host" value=""/>
+            <config-param name="server.auth.ntlm.domain" value=""/>
+         </service-config>
+         <service-input>
+            <template-param name="message" value="&lt;soapenv:Envelope xmlns:moh=&quot;http://www.mohesr.gov.ae&quot; xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&gt;&lt;soapenv:Header/&gt;&lt;soapenv:Body&gt;&lt;moh:Select_SubMajor&gt;&lt;moh:InsID&gt;$instID&lt;/moh:InsID&gt;&lt;moh:LevelID&gt;$levelID&lt;/moh:LevelID&gt;&lt;moh:MajorID&gt;$majorID&lt;/moh:MajorID&gt;&lt;!--Optional:--&gt;&lt;moh:user&gt;$user&lt;/moh:user&gt;&lt;!--Optional:--&gt;&lt;moh:password&gt;$password&lt;/moh:password&gt;&lt;!--Optional:--&gt;&lt;moh:outPut&gt;$output&lt;/moh:outPut&gt;&lt;/moh:Select_SubMajor&gt;&lt;/soapenv:Body&gt;&lt;/soapenv:Envelope&gt;">
+               <param datatype="string" encode="true" name="instID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="levelID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="majorID" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="user" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="password" sms-name="" src="" value=""/>
+               <param datatype="string" encode="true" name="output" sms-name="" src="" value=""/>
+            </template-param>
+         </service-input>
+         <service-output>
+            <dataset id="pgList" src="//Select_SubMajorResult">
+               <param datatype="string" format="None" formatvalue="" name="pgNo" sms-name="" src="ATTE_MAJOR/PG_NO" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="pgName_en" sms-name="" src="ATTE_MAJOR/PG_NAME_E" srcformatvalue="" target="response"/>
+               <param datatype="string" format="None" formatvalue="" name="pgName_ar" sms-name="" src="ATTE_MAJOR/PG_NAME_A" srcformatvalue="" target="response"/>
+            </dataset>
+            <param datatype="string" format="None" formatvalue="" name="output" sms-name="" src="//outPut" srcformatvalue="" target="response"/>
+            <param datatype="number" format="None" formatvalue="" name="opstatus" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="string" format="None" formatvalue="" name="errmsg" sms-name="" src="" srcformatvalue="" target=""/>
+            <param datatype="number" format="None" formatvalue="" name="httpStatusCode" sms-name="" src="" srcformatvalue="" target=""/>
+         </service-output>
+      </service>
+   </services>
+</application>

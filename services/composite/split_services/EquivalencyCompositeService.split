@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<compositeRoot>
+    <compcategory>
+        <application smscode="" name="" id="" desc="">
+            <app-config/>
+            <services>
+                <service smsenabled="false" smscode="" type="CompositeConnector" id="EquivalencyCompositeService" groupType="" cacheduration="" cachable="false" serviceGroup="">
+                    <service-config>
+                        <config-param value="Concurrent" name="exec_type"/>
+                        <config-param value="Lookup_Country" name="service"/>
+                        <config-param value="Lookup_StudyLevel" name="service"/>
+                        <config-param value="Select_PaymentMethodType" name="service"/>
+                        <config-param value="Equ_Lookup_Emirates" name="service"/>
+                    </service-config>
+                    <service-input/>
+                    <service-output/>
+                </service>
+            </services>
+        </application>
+        <catname>composite</catname>
+    </compcategory>
+</compositeRoot>

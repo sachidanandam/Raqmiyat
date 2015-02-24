@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><appEvents><appservice><evtSequence><enabled>true</enabled><seqname></seqname></evtSequence></appservice><deeplink><evtSequence><enabled>true</enabled><seqname></seqname></evtSequence></deeplink><onsearch><evtSequence><enabled>true</enabled><seqname></seqname></evtSequence></onsearch><onviewstatechange><evtSequence><enabled>true</enabled><seqname></seqname></evtSequence></onviewstatechange><postappinit><evtSequence><actionList xsi:type="eventFunctionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><enabled>true</enabled><name></name><type>6</type><functionName>None</functionName><functionNameMap><entry><key>js</key><value>setMohesrGlobals</value></entry><entry><key>lua</key><value>None</value></entry></functionNameMap><paramDataMap><entry><key>js</key><value/></entry><entry><key>lua</key><value/></entry></paramDataMap></actionList><actionList xsi:type="eventExpressionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><enabled>true</enabled><name></name><type>5</type><expr></expr><exprMap><entry><key>js</key><value>	if(kony.i18n.isLocaleSupportedByDevice("ar_SA") == false)
+	{
+		isArabicLocale = false;
+		isArabicSupported = false;
+		kony.i18n.setCurrentLocaleAsync("en_US", appInitlocaleEnOnSuccess, appInitlocaleEnOnFailure, null);
+		frmLogin.lnklanguage.setVisibility(false);
+		return frmLogin;
+	}
+	
+	function appInitlocaleEnOnSuccess()
+	{
+		alert("set to English");
+	}
+
+		function appInitlocaleEnOnFailure()
+	{
+		kony.print("could not set to English");
+	}</value></entry></exprMap></actionList><actionList xsi:type="eventFunctionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><enabled>true</enabled><name></name><type>6</type><functionName>None</functionName><functionNameMap><entry><key>js</key><value>hideDefaultAppLoadingIndicator</value></entry><entry><key>lua</key><value>None</value></entry></functionNameMap><paramDataMap><entry><key>js</key><value/></entry><entry><key>lua</key><value/></entry></paramDataMap></actionList><actionList xsi:type="eventFunctionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><enabled>true</enabled><name></name><type>6</type><functionName>None</functionName><functionNameMap><entry><key>js</key><value>setAppIdleTimeOut</value></entry></functionNameMap><paramDataMap><entry><key>js</key><value/></entry></paramDataMap></actionList><enabled>true</enabled><seqname></seqname></evtSequence></postappinit><preappinit><evtSequence><actionList xsi:type="eventFunctionAction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><enabled>true</enabled><name></name><type>6</type><functionName>None</functionName><functionNameMap><entry><key>js</key><value>setArabicLocale</value></entry></functionNameMap><paramDataMap><entry><key>js</key><value/></entry></paramDataMap></actionList><enabled>true</enabled><seqname></seqname></evtSequence></preappinit><settingsmenuitems><evtSequence><enabled>true</enabled><seqname></seqname></evtSequence></settingsmenuitems></appEvents>

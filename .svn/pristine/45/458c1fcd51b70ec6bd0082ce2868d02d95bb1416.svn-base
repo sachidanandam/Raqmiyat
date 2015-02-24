@@ -1,0 +1,95 @@
+function setArabicLocale()
+{ 
+		kony.i18n.setCurrentLocaleAsync("ar_SA", appInitlocaleArOnSuccess, appInitlocaleArOnFailure, null);
+}
+
+function appInitlocaleArOnSuccess()
+{
+	isArabicLocale = true;
+	kony.print("set to Arabic");
+}
+
+function appInitlocaleArOnFailure()
+{
+	kony.print("could not set to Arabic");
+}
+
+function changeAppLanguageToArabic()
+{
+	kony.i18n.setCurrentLocaleAsync("ar_SA", onLocaleArSuccess, onLocaleArFailure, null);
+}
+
+function onLocaleArSuccess()
+{
+	frmLoginAR.show();
+	destroyAllForms();
+	frmLogin.destroy();
+	//theme change here
+	//html string for browsers here
+	loadi18CurStud();
+	loadi18FacMembers();
+	loadi18GraStudStep1();
+	loadi18GraStudStep2();
+	isArabicLocale = true;
+}
+
+function onLocaleArFailure()
+{
+	//
+}
+
+function changeAppLanguageToEnglish()
+{
+	kony.i18n.setCurrentLocaleAsync("en_US", onLocaleEnSuccess, onLocaleEnFailure, null);
+}
+
+function onLocaleEnSuccess()
+{
+	frmLogin.show();
+	destroyAllForms();
+	frmLoginAR.destroy();
+	
+	//theme change here
+	//html string for browsers here
+	loadi18CurStud();
+	loadi18FacMembers();
+	loadi18GraStudStep1();
+	loadi18GraStudStep2();
+	isArabicLocale = false;
+}
+
+function onLocaleEnFailure()
+{
+	//
+}
+
+function changeThemeToDefault()
+{
+	kony.theme.setCurrentTheme("default", onEngSuccessCallback, onEngErrorCallback);
+	
+	function onEngSuccessCallback()
+	{
+		kony.print("changed theme to default for english");
+	}
+	
+	function onEngErrorCallback()
+	{
+		kony.print("could not change theme to default");
+	}
+}
+
+
+function changeThemeToArabic()
+{
+	kony.theme.setCurrentTheme("Arabic", onArSuccessCallback, onArErrorCallback);
+	
+	function onArSuccessCallback()
+	{
+		kony.print("changed theme to Arabic for arabic");
+	}
+	
+	function onArErrorCallback()
+	{
+		kony.print("could not change theme to arabic");
+	}
+}

@@ -13,7 +13,7 @@ isAttes=true;
 
 
 
-
+////////////
 
 var gblLoggedUserID = "";
 var AttestCamBase64 = "";

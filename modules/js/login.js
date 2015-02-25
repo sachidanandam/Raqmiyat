@@ -5,16 +5,6 @@ isPreStudyLevel=1;
 isPurpose=true;
 isAttes=true;
 
-/*
- * 
- */
-
-
-
-
-
-
-
 var gblLoggedUserID = "";
 var AttestCamBase64 = "";
 isSaveAttach=true;

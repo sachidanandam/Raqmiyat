@@ -5,6 +5,39 @@ function attest1AdjustFooter()			//adjust footer for general information details
 	kony.print("device name is " + deviceName);
 	var curLocale=kony.i18n.getCurrentLocale();
 	kony.print("Current locale is " + curLocale);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	if(deviceName!="android")
 	{
 		frmAttestGrad1.vbxNext.onClick = goTofrm2;

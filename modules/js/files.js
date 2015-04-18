@@ -6,7 +6,7 @@ var iOSFileBrowseFFIObject;
 var imageConversionData;
 var imageEncodeData = new Array();
 var segDescDelData = [];
-var isOld=true;
+var isOld=false;
 
 function retriveImagesFromGallery() {
 	var deviceName=kony.os.deviceInfo().name;
